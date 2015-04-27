@@ -1,0 +1,17 @@
+Instant Composer: Mad-libbed Music
+TO DO:
+
+1. Build MySQL Database Schema (John)
+2. Instructions/Copy for 1st Step of Web App (Ariel)
+	a) What is it?
+	b) How do I do it?
+	c) "Start Composing"
+3. Logo updates (Rene/Valeria)
+4. Layout of Web App UI (Adam/Valeria/Steve/Rene)
+5. Template (Steven/John/Adam)
+	a) Mobile Friendly
+	b) HTML/CSS
+	c) jQuery[Mobile]
+6. Vulgarity Filter
+7. Moderator Interface
+8. Score Visualizer
