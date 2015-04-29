@@ -2,16 +2,18 @@ Instant Composer: Mad-libbed Music
 TO DO:
 
 1. Build MySQL Database Schema (John)
-2. Instructions/Copy for 1st Step of Web App (Ariel)
+2. Instructions/copy for 1st step of web app (Ariel)
 	a) What is it?
 	b) How do I do it?
 	c) "Start Composing"
-3. Logo updates (Rene/Valeria)
-4. Layout of Web App UI (Adam/Valeria/Steve/Rene)
-5. Template (Steven/John/Adam)
+3. Define the steps for the interface
+4. Instructions/copy for the rest of the steps
+5. Logo updates (Rene/Valeria)
+6. Layout of Web App UI (Adam/Valeria/Steve/Rene)
+7. Template (Steven/John/Adam)
 	a) Mobile Friendly
 	b) HTML/CSS
 	c) jQuery[Mobile]
-6. Vulgarity Filter
-7. Moderator Interface
-8. Score Visualizer
+8. Vulgarity Filter
+9. Moderator Interface
+10. Score Visualizer
