@@ -1,16 +1,20 @@
 Step 1:
 Title of step 1 - Instant Composer: Mad-Libbed Music
-
+<copy>
 
 
 Step 2:
 Describe the dynamics of your composition
-
+[                               ]
 
 
 Step 3:
-
-
+Choose the instrumentation of your composition
+(O) Sax
+(O) Guitar
+(O) Keyboards
+(O) Drums
+(O) Bass
 
 
 Step 4:
@@ -20,8 +24,16 @@ Step 4:
 Step 5:
 ariel
 
+
+
+
+
 Step 6:
 Meg G. 
+
+
+
+
 
 Step 7:
 Valeria
