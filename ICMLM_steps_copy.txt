@@ -3,38 +3,54 @@ Title of step 1 - Instant Composer: Mad-Libbed Music
 <copy>
 
 
+
 Step 2:
-Describe the dynamics of your composition
-[                               ]
-
-
-Step 3:
-Choose the instrumentation of your composition
+Choose two to seven instruments
 (O) Sax
 (O) Guitar
 (O) Keyboards
 (O) Drums
 (O) Bass
 
+*Some instruments might be substituted if not available for your performance
+
+Step 3:
+Describe the tonality of your piece
+Is your piece atonal or tonal? Do you have a more unique way to describe the tonality?
+[                               ]
+
+Step 3:
+Describe the dynamics of your composition
+Is it loud or soft? Does your piece have a crescendo or decrescendo? 
+[                               ]
 
 Step 4:
-
-
+What is the mood?
+Is it tranquil, brilliant, melancholy?
+[                               ]
 
 Step 5:
-ariel
-
-
-
-
+Describe the tempo
+Is it allegro (fast), largo (slow), or atemporal (without tempo)?
+[                               ]
 
 Step 6:
-Meg G. 
-
-
-
-
+Give your piece a title
+[                               ]
 
 Step 7:
-Valeria
+Who is the author?
 
+Full Name
+[Anonymous                      ]
+
+[x] Remind me shortly before my piece is played
+[Email                          ]
+
+Step 8:
+Review your composition:
+dfj khd fkhdf kgjhd fkjgh dkfjgh dk
+
+Step 9:
+All Set!
+Thanks you, Full Name!
