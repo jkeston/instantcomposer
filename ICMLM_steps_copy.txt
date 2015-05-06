@@ -2,8 +2,6 @@ Step 1:
 Title of step 1 - Instant Composer: Mad-Libbed Music
 <copy>
 
-
-
 Step 2:
 Choose two to seven instruments
 (O) Sax
@@ -16,7 +14,7 @@ Choose two to seven instruments
 
 Step 3:
 Describe the tonality of your piece
-Is your piece atonal or tonal? Do you have a more unique way to describe the tonality?
+Is your piece in a major/minor key, or atonal/tonal? Do you have a more unique way to describe the pitch?
 [                               ]
 
 Step 3:
