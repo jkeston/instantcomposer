@@ -17,26 +17,31 @@ Describe the tonality of your piece
 Is your piece in a major/minor key, or atonal/tonal? Do you have a more unique way to describe the pitch?
 [                               ]
 
-Step 3:
+Step 4:
 Describe the dynamics of your composition
 Is it loud or soft? Does your piece have a crescendo or decrescendo? 
 [                               ]
 
-Step 4:
+Step 5:
 What is the mood?
 Is it tranquil, brilliant, melancholy?
 [                               ]
 
-Step 5:
+Step 6:
 Describe the tempo
 Is it allegro (fast), largo (slow), or atemporal (without tempo)?
 [                               ]
 
-Step 6:
+Step 7:
+How long is your piece?
+---------------------[]----------
+(3:00 - 7:00)
+
+Step 7:
 Give your piece a title
 [                               ]
 
-Step 7:
+Step 8:
 Who is the author?
 
 Full Name
@@ -45,10 +50,10 @@ Full Name
 [x] Remind me shortly before my piece is played
 [Email                          ]
 
-Step 8:
+Step 9:
 Review your composition:
 dfj khd fkhdf kgjhd fkjgh dkfjgh dk
 
-Step 9:
+Step 10:
 All Set!
 Thanks you, Full Name!
