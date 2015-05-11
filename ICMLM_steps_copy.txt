@@ -1,6 +1,8 @@
 Step 1:
 Title of step 1 - Instant Composer: Mad-Libbed Music
-<copy>
+This project instantly turns you, the audience, into a composer. Whether or not you have any musical background you can write a piece of your own that will be played by our ensemble within minutes of composing it. Instead of using traditional notation, your compsoitions are textual or instructional scores popularized by Pauline Oliveros. Through a process that may take less than a minute you can write your piece and submit it for its debut performance!
+
+When you're ready to participate press the "Start Composing" button. You will be asked a series of questions (what instruments to include, what's the mood, etc.) and then shown a preview of your score. You can use your own vocabulary or musical terms if you know them. The musicians will interpret your score to the best of their ability. We only ask that you be creative and have fun composing!
 
 Step 2:
 Choose two to seven instruments
