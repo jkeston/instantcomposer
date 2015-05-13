@@ -1,10 +1,10 @@
-Step 1:
+Intro Step:
 Title of step 1 - Instant Composer: Mad-Libbed Music
 This project instantly turns you, the audience, into a composer. Whether or not you have any musical background you can write a piece of your own that will be played by our ensemble within minutes of composing it. Instead of using traditional notation, your compsoitions are textual or instructional scores popularized by Pauline Oliveros. Through a process that may take less than a minute you can write your piece and submit it for its debut performance!
 
 When you're ready to participate press the "Start Composing" button. You will be asked a series of questions (what instruments to include, what's the mood, etc.) and then shown a preview of your score. You can use your own vocabulary or musical terms if you know them. The musicians will interpret your score to the best of their ability. We only ask that you be creative and have fun composing!
 
-Step 2:
+Step 1:
 Choose two to seven instruments
 (O) Sax
 (O) Guitar
@@ -14,36 +14,33 @@ Choose two to seven instruments
 
 *Some instruments might be substituted if not available for your performance
 
-Step 3:
+Step 2:
 Describe the tonality of your piece
 Is your piece in a major/minor key, or atonal/tonal? Do you have a more unique way to describe the pitch?
 [                               ]
 
-Step 4:
+Step 3:
 Describe the dynamics of your composition
 Is it loud or soft? Does your piece have a crescendo or decrescendo? 
 [                               ]
 
-Step 5:
 What is the mood?
 Is it tranquil, brilliant, melancholy?
 [                               ]
 
-Step 6:
+Step 4:
 Describe the tempo
 Is it allegro (fast), largo (slow), or atemporal (without tempo)?
 [                               ]
 
-Step 7:
 How long is your piece?
 ---------------------[]----------
 (3:00 - 7:00)
 
-Step 7:
+Step 5:
 Give your piece a title
 [                               ]
 
-Step 8:
 Who is the author?
 
 Full Name
@@ -52,10 +49,10 @@ Full Name
 [x] Remind me shortly before my piece is played
 [Email                          ]
 
-Step 9:
+Finish:
 Review your composition:
 dfj khd fkhdf kgjhd fkjgh dkfjgh dk
 
-Step 10:
+Thank you page:
 All Set!
 Thanks you, Full Name!
