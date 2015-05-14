@@ -7,21 +7,29 @@
 	<link rel="stylesheet" href="css/webapp.css" />
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("input").attr("maxlength", 48);
+	});
+	function pop(e,f) {
+		$(e).val(f);
+	}
+	</script>
 </head>
 <body>
 	<div data-role="main">
-		<form>
+		<form class="ui-filterable">
 		<div data-role="page" id="intro">
 			<div data-role="header">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
 			<div data-role="content">
-				<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
 				<div data-role="popup" id="oliveros" class="ui-content icmlm_popup">
 					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
 					<p><strong>Pauline Oliveros</strong> is an American composer and accordionist who is a central figure in the development of experimental and post-war electronic art music. She was a founding member of the San Francisco Tape Music Center in the 1960s, and served as its director. She has taught music at Mills College, the University of California, San Diego, Oberlin Conservatory of Music, and Rensselaer Polytechnic Institute. Oliveros has written books, formulated new music theories and investigated new ways to focus attention on music including her concepts of "Deep Listening" and "sonic awareness". &mdash; Wikipedia</p>
 				</div>
+				<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
 				<p>Through a process that may take less than a minute you can write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
 			</div>
 			<div data-role="footer" style="text-align:center" data-position="fixed">
@@ -38,6 +46,7 @@
 				<select multiple="true" data-native-menu="false"  name="instruments[]" id="instruments">
 					<option value="">Choose the Instruments</option>
 					<option value="Bass">Bass</option>
+					<option value="Bass Clarinet">Bass Clarinet</option>
 					<option value="Drums">Drums</option>
 					<option value="Flute">Flute</option>
 					<option value="Guitar">Guitar</option>
@@ -45,7 +54,7 @@
 					<option value="Oboe">Oboe</option>
 					<option value="Violin">Violin</option>
 				</select>
-				<p>* Some instruments might be substituted if not available for your performance</p>
+				<p>* Some instruments might be substituted if not available for your performance.</p>
 			</div>
 			<div data-role="footer" style="text-align:center" data-position="fixed">
 				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
@@ -63,20 +72,27 @@
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
 			<div data-role="content">
-				<label for="tonality">Please describe the tonality of your piece. Is your piece in a particular mode, a major or minor key, or atonal/tonal? Do you have a more unique way to describe the pitch?</label>
+				<div data-role="popup" id="tonal" class="ui-content icmlm_popup">
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+					<p>Tonality is an organized system of tones (e.g., the tones of a major or minor scale) in which one tone (the tonic) becomes the central point to which the remaining tones are related. In tonality, the tonic (tonal center) is the tone of complete relaxation, the target toward which other tones lead. &mdash; Benward &amp; Saker</p>
+				</div>
+				<label for="tonality">Describe the <a href="#tonal" data-transition="slidedown" data-rel="popup" data-position-to="window">tonality</a> of your piece. Is your piece in a particular mode, a major or minor key, or atonal/tonal?  Or describe the pitch in your own words:</label>
 				<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
-				<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Enter tonality..." data-inset="true" id="tonality">
-					<li><a href="#">Ionian</a></li>
-					<li><a href="#">Dorian</a></li>
-					<li><a href="#">Phrygian</a></li>
-					<li><a href="#">Lydian</a></li>
-					<li><a href="#">Mixolydian</a></li>					
-					<li><a href="#">Aeolian</a></li>
-					<li><a href="#">Locrian</a></li>
-					<li><a href="#">Major</a></li>
-					<li><a href="#">Minor</a></li>
-					<li><a href="#">Major Blues</a></li>
-					<li><a href="#">Minor Blues</a></li>
+				<input type="text" name="tonality" id="tonality" placeholder="Enter the tonality..." value="" />
+				<ul data-filter="true" data-input="#tonality" data-role="listview" data-filter-reveal="true" data-inset="true">
+					<li><a onclick="pop('#tonality','atonal')">Atonal</a></li>
+					<li><a onclick="pop('#tonality','tonal')">Tonal</a></li>
+					<li><a onclick="pop('#tonality','ionian')">Ionian</a></li>
+					<li><a onclick="pop('#tonality','dorian')">Dorian</a></li>
+					<li><a onclick="pop('#tonality','phrygian')">Phrygian</a></li>
+					<li><a onclick="pop('#tonality','lydian')">Lydian</a></li>
+					<li><a onclick="pop('#tonality','mixolydian')">Mixolydian</a></li>					
+					<li><a onclick="pop('#tonality','aeolian')">Aeolian</a></li>
+					<li><a onclick="pop('#tonality','locrian')">Locrian</a></li>
+					<li><a onclick="pop('#tonality','major')">Major</a></li>
+					<li><a onclick="pop('#tonality','minor')">Minor</a></li>
+					<li><a onclick="pop('#tonality','major blues')">Major Blues</a></li>
+					<li><a onclick="pop('#tonality','minor blues')">Minor Blues</a></li>
 				</ul>
 			</div>
 			<div data-role="footer" style="text-align:center" data-position="fixed">
@@ -84,6 +100,43 @@
 				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 				<a href="#step2" data-transition="slide" class="ui-btn-active">2</a>
 				<a href="#step3" data-transition="slide">3</a>
+				<a href="#step4" data-transition="slide">4</a>
+				<a href="#step5" data-transition="slide">5</a>
+				<a href="#review" data-transition="slide">Review</a>
+			</div>
+		</div>
+		<div data-role="page" id="step3">
+			<div data-role="header">
+				<p class="topHead">Instant Composer</p>
+				<p class="subHead">Mad-libbed Music</p>
+			</div>
+			<div data-role="content">
+				<div data-role="popup" id="dynam" class="ui-content icmlm_popup">
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+					<p>In music, <strong>dynamics</strong> refers to the volume of a sound or note, but can also refer to every aspect of the execution of a given piece, either stylistic (staccato, legato etc.) or functional (velocity). The term is also applied to the written or printed musical notation used to indicate dynamics. Dynamics are relative and do not refer to specific volume levels. &mdash; Wikipedia</p>
+				</div>
+				<label for="dynamics">Describe the <a href="#dynam" data-transition="slidedown" data-rel="popup" data-position-to="window">dynamics</a> of your composition. Is it loud or soft? Does your piece have a crescendo or decrescendo? Or use your own words:</label>
+				<input type="text" name="dynamics" id="dynamics" placeholder="Set the dynamics..." value="" />
+				<ul data-filter="true" data-input="#dynamics" data-role="listview" data-filter-reveal="true" data-inset="true">
+					<li><a onclick="pop('#dynamics','piano')">Piano (soft)</a></li>
+					<li><a onclick="pop('#dynamics','forte')">Forte (loud)</a></li>
+					<li><a onclick="pop('#dynamics','mezzo-piano')">Mezzo-piano (moderately soft)</a></li>
+					<li><a onclick="pop('#dynamics','mezzo-forte')">Mezzo-Forte (moderately loud)</a></li>
+					<li><a onclick="pop('#dynamics','pianissimo')">Pianissimo (very soft)</a></li>
+					<li><a onclick="pop('#dynamics','fortissimo')">Fortissimo (very loud)</a></li>
+					<li><a onclick="pop('#dynamics','crescendo')">Crescendo (become louder)</a></li>
+					<li><a onclick="pop('#dynamics','decrescendo')">Decrescendo (become softer)</a></li>
+				</ul>
+				<p>&nbsp;</p>
+				<label for="mood">What is the mood? Is it tranquil, brilliant, melancholy? Use your own words:</label>
+				<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
+				<input type="text" name="mood" id="mood" placeholder="Describe the mood..." />
+			</div>
+			<div data-role="footer" style="text-align:center" data-position="fixed">
+				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+				<a href="#step3" data-transition="slide" class="ui-btn-active">3</a>
 				<a href="#step4" data-transition="slide">4</a>
 				<a href="#step5" data-transition="slide">5</a>
 				<a href="#review" data-transition="slide">Review</a>
