@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700);
+body {
+	font-family: 'Roboto', sans-serif;
+}
+#notify_email {
+	display: none;
+}
+.ui-slider-input {
+	visibility: hidden !important;
+	display: none !important;
+}
+.ui-slider-track {
+	margin: 0 !important;
+}
+p.topHead {
+	margin: 0.5em 0 0 0;
+	font-size: 2em;
+	text-align: center;
+}
+p.subHead {
+	font-size: 1.5em;
+	margin-top: 0;
+	text-align: center;
+}
+.icmlm_popup {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80%;
+}
+.ui-btn {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
+legend {
+	width: 6em;
+	display: inline-block;
+	float: left;
+	vertical-align: baseline;
+	padding-top: 0.75em;
+}
+.ui-panel, #panel {
+	/*width: 20em;*/
+}
+.form_head {
+	font-weight: 700;
+	text-align: justify;
+	margin-top: 0 !important;
+	margin-bottom: -1em !important;
+	padding-bottom: -1em !important;
+}
+.form_head:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+.ui-controlgroup, fieldset.ui-controlgroup {
+	margin: 0 0;
+}

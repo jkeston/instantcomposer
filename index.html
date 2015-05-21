@@ -5,7 +5,7 @@
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="css/webapp.css" />
-	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 	$(document).ready(function(){
@@ -34,7 +34,7 @@
 			$("#review_title").html($("#title").val());
 		}
 		if ($("#author").val().length > 0) {
-			$("#review_author").html($("#author").val());
+			$("#review_author").html('By '+$("#author").val());
 		}
 		if ($("#tonality").val().length > 0) {
 			$("#review_tonality").html($("#tonality").val());
@@ -275,7 +275,7 @@
 					<p>You agree that we can perform your piece during Northern Spark 2015 and post documentation that might include excerpts of your composition in audio and/or video format.</p>
 				</div>
 				<h2><span id="review_title">_________</span></h2>
-				<h3><span id="review_author">_________</span></h3>
+				<h3><span id="review_author">By _________</span></h3>
 				<p>Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p> 
 				<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
 				<input type="submit" value="Submit My Piece" id="submit" />
