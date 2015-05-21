@@ -10,9 +10,61 @@
 	<script>
 	$(document).ready(function(){
 		$("input").attr("maxlength", 48);
+		$("#notify").click(function(){
+			$("#notify_email").toggle();
+		});
 	});
 	function pop(e,f) {
 		$(e).val(f);
+	}
+	function updateMins(e) {
+		$('#len').html(secs2Mins(e.value));		
+	}
+	function secs2Mins(e) {
+		var m = Math.floor(e / 60);
+		var s = e - (m * 60);
+		if ( s < 10 ) {
+			s = '0' + s;
+		}
+		var l = m + ':' + s;
+		return l;
+	}
+	function renderReview() {
+		if ($("#title").val().length > 0) {
+			$("#review_title").html($("#title").val());
+		}
+		if ($("#author").val().length > 0) {
+			$("#review_author").html($("#author").val());
+		}
+		if ($("#tonality").val().length > 0) {
+			$("#review_tonality").html($("#tonality").val());
+		}
+		if ($("#tempo").val().length > 0) {
+			$("#review_tempo").html($("#tempo").val());
+		}
+		$("#review_length").html( secs2Mins( $("#length").val() ) );
+		if ($("#mood").val().length > 0) {
+			$("#review_mood").html($("#mood").val());
+		}
+		if ($("#dynamics").val().length > 0) {
+			$("#review_dynamics").html($("#dynamics").val());
+		}		
+		var inst = ($("#instruments").val() || []);
+		var n = inst.length;
+		var output = '';
+		for ( i = 0; i < n; ++i ) {
+			if ( inst[i] != 'undefined' ) {
+				if ( i < n-1 ) {
+					output += inst[i]+', ';
+				}
+				if ( i == n-1 ) {
+					output += ' and ' + inst[i];
+				}
+			}
+		}
+		if ( output.length > 0 ) {
+			$("#review_instruments").html( output );
+		}
 	}
 	</script>
 </head>
@@ -31,9 +83,17 @@
 				</div>
 				<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
 				<p>Through a process that may take less than a minute you can write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
+				<button><a href="#step1" data-transition="slide">Start Composing</a></button>
 			</div>
 			<div data-role="footer" style="text-align:center" data-position="fixed">
-				<a href="#step1" data-transition="slide">Start Composing</a>
+
+				<a href="#intro" data-transition="slide" class="ui-btn-active">Home</a>
+				<a href="#step1" data-transition="slide">1</a>
+				<a href="#step2" data-transition="slide">2</a>
+				<a href="#step3" data-transition="slide">3</a>
+				<a href="#step4" data-transition="slide">4</a>
+				<a href="#step5" data-transition="slide">5</a>
+				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 			</div>
 		</div>
 		<div data-role="page" id="step1">
@@ -45,14 +105,14 @@
 				<label for="instruments">Please choose 2&mdash;7 instruments:</label>
 				<select multiple="true" data-native-menu="false"  name="instruments[]" id="instruments">
 					<option value="">Choose the Instruments</option>
-					<option value="Bass">Bass</option>
-					<option value="Bass Clarinet">Bass Clarinet</option>
-					<option value="Drums">Drums</option>
-					<option value="Flute">Flute</option>
-					<option value="Guitar">Guitar</option>
-					<option value="Keyboards">Keyboards</option>
-					<option value="Oboe">Oboe</option>
-					<option value="Violin">Violin</option>
+					<option value="bass">Bass</option>
+					<option value="bass clarinet">Bass Clarinet</option>
+					<option value="bassoon">Bassoon</option>
+					<option value="drums">Drums</option>
+					<option value="flute">Flute</option>
+					<option value="guitar">Guitar</option>
+					<option value="keyboards">Keyboards</option>
+					<option value="violin">Violin</option>
 				</select>
 				<p>* Some instruments might be substituted if not available for your performance.</p>
 			</div>
@@ -63,7 +123,7 @@
 				<a href="#step3" data-transition="slide">3</a>
 				<a href="#step4" data-transition="slide">4</a>
 				<a href="#step5" data-transition="slide">5</a>
-				<a href="#review" data-transition="slide">Review</a>
+				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 			</div>
 		</div>
 		<div data-role="page" id="step2">
@@ -102,7 +162,7 @@
 				<a href="#step3" data-transition="slide">3</a>
 				<a href="#step4" data-transition="slide">4</a>
 				<a href="#step5" data-transition="slide">5</a>
-				<a href="#review" data-transition="slide">Review</a>
+				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 			</div>
 		</div>
 		<div data-role="page" id="step3">
@@ -139,10 +199,98 @@
 				<a href="#step3" data-transition="slide" class="ui-btn-active">3</a>
 				<a href="#step4" data-transition="slide">4</a>
 				<a href="#step5" data-transition="slide">5</a>
-				<a href="#review" data-transition="slide">Review</a>
+				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 			</div>
 		</div>
-		</form>
+		<div data-role="page" id="step4">
+			<div data-role="header">
+				<p class="topHead">Instant Composer</p>
+				<p class="subHead">Mad-libbed Music</p>
+			</div>
+			<div data-role="content">
+				<div data-role="popup" id="temp" class="ui-content icmlm_popup">
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+					<p>In musical terminology, tempo ("time" in Italian; plural: tempi) is the speed or pace of a given piece or subsection thereof. &mdash; Wikipedia</p>
+				</div>
+				<label for="tempo">Describe the <a href="#temp" data-transition="slidedown" data-rel="popup" data-position-to="window">tempo</a> (speed):</label>
+				<input type="text" name="tempo" id="tempo" placeholder="Set the tempo..." value="" />
+				<ul data-filter="true" data-input="#tempo" data-role="listview" data-filter-reveal="true" data-inset="true">
+					<li><a onclick="pop('#tempo','largo')">Largo (very slow)</a></li>
+					<li><a onclick="pop('#tempo','adagio')">Adagio (slow)</a></li>
+					<li><a onclick="pop('#tempo','andante')">Andante (walking pace)</a></li>
+					<li><a onclick="pop('#tempo','moderato')">Moderato (moderately)</a></li>
+					<li><a onclick="pop('#tempo','allegro')">Allegro (fast)</a></li>
+					<li><a onclick="pop('#tempo','vivace')">Vivace (very fast)</a></li>
+				</ul>
+				<p>&nbsp;</p>
+				<label for="length">Length (3:00 to 7:00 mins): <strong id="len"></strong></label>
+				<input type="range" name="length" id="length" value="240" min="180" max="420" data-highlight="true" onchange="updateMins(this)" />
+			</div>
+			<div data-role="footer" style="text-align:center" data-position="fixed">
+				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+				<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
+				<a href="#step4" data-transition="slide" class="ui-btn-active">4</a>
+				<a href="#step5" data-transition="slide">5</a>
+				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
+			</div>
+		</div>
+		<div data-role="page" id="step5">
+			<div data-role="header">
+				<p class="topHead">Instant Composer</p>
+				<p class="subHead">Mad-libbed Music</p>
+			</div>
+			<div data-role="content">
+				<label for="title">Almost there! Now it's time to give your piece a title:</label>
+				<input type="text" name="title" id="title" placeholder="Name the composition..." value="" />
+				<label for="author">Please enter the full name of the composer (leave it blank if you'd like to remain anonymous): </label>
+				<input type="text" name="author" id="author" placeholder="Anonymous..." />
+				<div data-role="popup" id="note" class="ui-content icmlm_popup">
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+					<p>We will keep your email address private and only use it to notify you shortly before your composition is about to be performed by the ensemble.</p>
+				</div>
+				<label for="notify"><input type="checkbox" name="notify" id="notify" value="yes" /> Remind me shortly before my piece is played</label>
+				<div id="notify_email"><label for="email">Please enter your email for <a href="#note" data-transition="slidedown" data-rel="popup" data-position-to="window">notification</a> only:</label>
+				<input type="text" name="email" id="email" placeholder="Email..." /></div>
+			</div>
+			<div data-role="footer" style="text-align:center" data-position="fixed">
+				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+				<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
+				<a href="#step4" data-transition="slide" data-direction="reverse">4</a>
+				<a href="#step5" data-transition="slide" class="ui-btn-active">5</a>
+				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
+			</div>
+		</div>
+		<div data-role="page" id="review">
+			<div data-role="header">
+				<p class="topHead">Instant Composer</p>
+				<p class="subHead">Mad-libbed Music</p>
+			</div>
+			<div data-role="content">
+				<div data-role="popup" id="perform" class="ui-content icmlm_popup">
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+					<p>You agree that we can perform your piece during Northern Spark 2015 and post documentation that might include excerpts of your composition in audio and/or video format.</p>
+				</div>
+				<h2><span id="review_title">_________</span></h2>
+				<h3><span id="review_author">_________</span></h3>
+				<p>Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p> 
+				<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
+				<input type="submit" value="Submit My Piece" id="submit" />
+			</div>
+			<div data-role="footer" style="text-align:center" data-position="fixed">
+				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+				<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
+				<a href="#step4" data-transition="slide" data-direction="reverse">4</a>
+				<a href="#step5" data-transition="slide" data-direction="reverse">5</a>
+				<a onclick="renderReview()" href="#review" data-transition="slide" class="ui-btn-active">Review</a>
+			</div>
+		</div>
+	</form>
 	</div>
 </body>
 </html>
