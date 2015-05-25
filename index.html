@@ -13,225 +13,225 @@
 <body>
 	<div data-role="main">
 		<form class="ui-filterable">
-		<div data-role="page" id="intro">
-			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-				<p class="topHead">Instant Composer</p>
-				<p class="subHead">Mad-libbed Music</p>
-			</div>
-			<div data-role="content">
-				<div data-role="popup" id="oliveros" class="ui-content icmlm_popup">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-					<p><strong>Pauline Oliveros</strong> is an American composer and accordionist who is a central figure in the development of experimental and post-war electronic art music. She was a founding member of the San Francisco Tape Music Center in the 1960s, and served as its director. She has taught music at Mills College, the University of California, San Diego, Oberlin Conservatory of Music, and Rensselaer Polytechnic Institute. Oliveros has written books, formulated new music theories and investigated new ways to focus attention on music including her concepts of "Deep Listening" and "sonic awareness". &mdash; Wikipedia</p>
+			<div data-role="page" id="intro">
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
 				</div>
-				<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
-				<p>Through a process that may take less than a minute you can write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
-				<button class="start"><a href="#step1" data-transition="slide">Start Composing</a></button>
-			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
-				<a href="#intro" data-transition="slide" class="ui-btn-active">Home</a>
-				<a href="#step1" data-transition="slide">1</a>
-				<a href="#step2" data-transition="slide">2</a>
-				<a href="#step3" data-transition="slide">3</a>
-				<a href="#step4" data-transition="slide">4</a>
-				<a href="#step5" data-transition="slide">5</a>
-				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
-			</div>
-		</div>
-		<div data-role="page" id="step1">
-			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-				<p class="topHead">Instant Composer</p>
-				<p class="subHead">Mad-libbed Music</p>
-			</div>
-			<div data-role="content">
-				<label for="instruments">Please choose 2&mdash;7 instruments:</label>
-				<select multiple="true" data-native-menu="false"  name="instruments[]" id="instruments">
-					<option value="">Choose the Instruments</option>
-					<option value="bass">Bass</option>
-					<option value="bass clarinet">Bass Clarinet</option>
-					<option value="bassoon">Bassoon</option>
-					<option value="drums">Drums</option>
-					<option value="flute">Flute</option>
-					<option value="guitar">Guitar</option>
-					<option value="keyboards">Keyboards</option>
-					<option value="violin">Violin</option>
-				</select>
-				<p>* Some instruments might be substituted if not available for your performance.</p>
-			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
-				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
-				<a href="#step1" data-transition="slide" class="ui-btn-active">1</a>
-				<a href="#step2" data-transition="slide">2</a>
-				<a href="#step3" data-transition="slide">3</a>
-				<a href="#step4" data-transition="slide">4</a>
-				<a href="#step5" data-transition="slide">5</a>
-				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
-			</div>
-		</div>
-		<div data-role="page" id="step2">
-			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-				<p class="topHead">Instant Composer</p>
-				<p class="subHead">Mad-libbed Music</p>
-			</div>
-			<div data-role="content">
-				<div data-role="popup" id="tonal" class="ui-content icmlm_popup">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-					<p>Tonality is an organized system of tones (e.g., the tones of a major or minor scale) in which one tone (the tonic) becomes the central point to which the remaining tones are related. In tonality, the tonic (tonal center) is the tone of complete relaxation, the target toward which other tones lead. &mdash; Benward &amp; Saker</p>
+				<div data-role="content">
+					<div data-role="popup" id="oliveros" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p><strong>Pauline Oliveros</strong> is an American composer and accordionist who is a central figure in the development of experimental and post-war electronic art music. She was a founding member of the San Francisco Tape Music Center in the 1960s, and served as its director. She has taught music at Mills College, the University of California, San Diego, Oberlin Conservatory of Music, and Rensselaer Polytechnic Institute. Oliveros has written books, formulated new music theories and investigated new ways to focus attention on music including her concepts of "Deep Listening" and "sonic awareness". &mdash; Wikipedia</p>
+					</div>
+					<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
+					<p>Through a process that may take less than a minute you can write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
+					<button class="start"><a href="#step1" data-transition="slide">Start Composing</a></button>
 				</div>
-				<label for="tonality">Describe the <a href="#tonal" data-transition="slidedown" data-rel="popup" data-position-to="window">tonality</a> of your piece. Is your piece in a particular mode, a major or minor key, or atonal/tonal?  Or describe the pitch in your own words:</label>
-				<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
-				<input type="text" name="tonality" id="tonality" placeholder="Enter the tonality..." value="" />
-				<ul data-filter="true" data-input="#tonality" data-role="listview" data-filter-reveal="true" data-inset="true">
-					<li><a onclick="pop('#tonality','atonal')">Atonal</a></li>
-					<li><a onclick="pop('#tonality','tonal')">Tonal</a></li>
-					<li><a onclick="pop('#tonality','ionian')">Ionian</a></li>
-					<li><a onclick="pop('#tonality','dorian')">Dorian</a></li>
-					<li><a onclick="pop('#tonality','phrygian')">Phrygian</a></li>
-					<li><a onclick="pop('#tonality','lydian')">Lydian</a></li>
-					<li><a onclick="pop('#tonality','mixolydian')">Mixolydian</a></li>
-					<li><a onclick="pop('#tonality','aeolian')">Aeolian</a></li>
-					<li><a onclick="pop('#tonality','locrian')">Locrian</a></li>
-					<li><a onclick="pop('#tonality','major')">Major</a></li>
-					<li><a onclick="pop('#tonality','minor')">Minor</a></li>
-					<li><a onclick="pop('#tonality','major blues')">Major Blues</a></li>
-					<li><a onclick="pop('#tonality','minor blues')">Minor Blues</a></li>
-				</ul>
-			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
-				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
-				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
-				<a href="#step2" data-transition="slide" class="ui-btn-active">2</a>
-				<a href="#step3" data-transition="slide">3</a>
-				<a href="#step4" data-transition="slide">4</a>
-				<a href="#step5" data-transition="slide">5</a>
-				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
-			</div>
-		</div>
-		<div data-role="page" id="step3">
-			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-				<p class="topHead">Instant Composer</p>
-				<p class="subHead">Mad-libbed Music</p>
-			</div>
-			<div data-role="content">
-				<div data-role="popup" id="dynam" class="ui-content icmlm_popup">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-					<p>In music, <strong>dynamics</strong> refers to the volume of a sound or note, but can also refer to every aspect of the execution of a given piece, either stylistic (staccato, legato etc.) or functional (velocity). The term is also applied to the written or printed musical notation used to indicate dynamics. Dynamics are relative and do not refer to specific volume levels. &mdash; Wikipedia</p>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="#intro" data-transition="slide" class="ui-btn-active">Home</a>
+					<a href="#step1" data-transition="slide">1</a>
+					<a href="#step2" data-transition="slide">2</a>
+					<a href="#step3" data-transition="slide">3</a>
+					<a href="#step4" data-transition="slide">4</a>
+					<a href="#step5" data-transition="slide">5</a>
+					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-				<label for="dynamics">Describe the <a href="#dynam" data-transition="slidedown" data-rel="popup" data-position-to="window">dynamics</a> of your composition. Is it loud or soft? Does your piece have a crescendo or decrescendo? Or use your own words:</label>
-				<input type="text" name="dynamics" id="dynamics" placeholder="Set the dynamics..." value="" />
-				<ul data-filter="true" data-input="#dynamics" data-role="listview" data-filter-reveal="true" data-inset="true">
-					<li><a onclick="pop('#dynamics','piano')">Piano (soft)</a></li>
-					<li><a onclick="pop('#dynamics','forte')">Forte (loud)</a></li>
-					<li><a onclick="pop('#dynamics','mezzo-piano')">Mezzo-piano (moderately soft)</a></li>
-					<li><a onclick="pop('#dynamics','mezzo-forte')">Mezzo-Forte (moderately loud)</a></li>
-					<li><a onclick="pop('#dynamics','pianissimo')">Pianissimo (very soft)</a></li>
-					<li><a onclick="pop('#dynamics','fortissimo')">Fortissimo (very loud)</a></li>
-					<li><a onclick="pop('#dynamics','crescendo')">Crescendo (become louder)</a></li>
-					<li><a onclick="pop('#dynamics','decrescendo')">Decrescendo (become softer)</a></li>
-				</ul>
-				<p>&nbsp;</p>
-				<label for="mood">What is the mood? Is it tranquil, brilliant, melancholy? Use your own words:</label>
-				<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
-				<input type="text" name="mood" id="mood" placeholder="Describe the mood..." />
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
-				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
-				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
-				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
-				<a href="#step3" data-transition="slide" class="ui-btn-active">3</a>
-				<a href="#step4" data-transition="slide">4</a>
-				<a href="#step5" data-transition="slide">5</a>
-				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
-			</div>
-		</div>
-		<div data-role="page" id="step4">
-			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-				<p class="topHead">Instant Composer</p>
-				<p class="subHead">Mad-libbed Music</p>
-			</div>
-			<div data-role="content">
-				<div data-role="popup" id="temp" class="ui-content icmlm_popup">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-					<p>In musical terminology, tempo ("time" in Italian; plural: tempi) is the speed or pace of a given piece or subsection thereof. &mdash; Wikipedia</p>
+			<div data-role="page" id="step1">
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
 				</div>
-				<label for="tempo">Describe the <a href="#temp" data-transition="slidedown" data-rel="popup" data-position-to="window">tempo</a> (speed):</label>
-				<input type="text" name="tempo" id="tempo" placeholder="Set the tempo..." value="" />
-				<ul data-filter="true" data-input="#tempo" data-role="listview" data-filter-reveal="true" data-inset="true">
-					<li><a onclick="pop('#tempo','largo')">Largo (very slow)</a></li>
-					<li><a onclick="pop('#tempo','adagio')">Adagio (slow)</a></li>
-					<li><a onclick="pop('#tempo','andante')">Andante (walking pace)</a></li>
-					<li><a onclick="pop('#tempo','moderato')">Moderato (moderately)</a></li>
-					<li><a onclick="pop('#tempo','allegro')">Allegro (fast)</a></li>
-					<li><a onclick="pop('#tempo','vivace')">Vivace (very fast)</a></li>
-				</ul>
-				<p>&nbsp;</p>
-				<label for="length">Length (3:00 to 7:00 mins): <strong id="len"></strong></label>
-				<input type="range" name="length" id="length" value="240" min="180" max="420" data-highlight="true" onchange="updateMins(this)" />
-			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
-				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
-				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
-				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
-				<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
-				<a href="#step4" data-transition="slide" class="ui-btn-active">4</a>
-				<a href="#step5" data-transition="slide">5</a>
-				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
-			</div>
-		</div>
-		<div data-role="page" id="step5">
-			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-				<p class="topHead">Instant Composer</p>
-				<p class="subHead">Mad-libbed Music</p>
-			</div>
-			<div data-role="content">
-				<label for="title">Almost there! Now it's time to give your piece a title:</label>
-				<input type="text" name="title" id="title" placeholder="Name the composition..." value="" />
-				<label for="author">Please enter the full name of the composer (leave it blank if you'd like to remain anonymous): </label>
-				<input type="text" name="author" id="author" placeholder="Anonymous..." />
-				<div data-role="popup" id="note" class="ui-content icmlm_popup">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-					<p>We will keep your email address private and only use it to notify you shortly before your composition is about to be performed by the ensemble.</p>
+				<div data-role="content">
+					<label for="instruments">Please choose 2&mdash;7 instruments:</label>
+					<select multiple="true" data-native-menu="false"  name="instruments[]" id="instruments">
+						<option value="">Choose the Instruments</option>
+						<option value="bass">Bass</option>
+						<option value="bass clarinet">Bass Clarinet</option>
+						<option value="bassoon">Bassoon</option>
+						<option value="drums">Drums</option>
+						<option value="flute">Flute</option>
+						<option value="guitar">Guitar</option>
+						<option value="keyboards">Keyboards</option>
+						<option value="violin">Violin</option>
+					</select>
+					<p>* Some instruments might be substituted if not available for your performance.</p>
 				</div>
-				<label for="notify"><input type="checkbox" name="notify" id="notify" value="yes" /> Remind me shortly before my piece is played</label>
-				<div id="notify_email"><label for="email">Please enter your email for <a href="#note" data-transition="slidedown" data-rel="popup" data-position-to="window">notification</a> only:</label>
-				<input type="text" name="email" id="email" placeholder="Email..." /></div>
-			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
-				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
-				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
-				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
-				<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
-				<a href="#step4" data-transition="slide" data-direction="reverse">4</a>
-				<a href="#step5" data-transition="slide" class="ui-btn-active">5</a>
-				<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
-			</div>
-		</div>
-		<div data-role="page" id="review">
-			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-				<p class="topHead">Instant Composer</p>
-				<p class="subHead">Mad-libbed Music</p>
-			</div>
-			<div data-role="content">
-				<div data-role="popup" id="perform" class="ui-content icmlm_popup">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-					<p>You agree that we can perform your piece during Northern Spark 2015 and post documentation that might include excerpts of your composition in audio and/or video format.</p>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+					<a href="#step1" data-transition="slide" class="ui-btn-active">1</a>
+					<a href="#step2" data-transition="slide">2</a>
+					<a href="#step3" data-transition="slide">3</a>
+					<a href="#step4" data-transition="slide">4</a>
+					<a href="#step5" data-transition="slide">5</a>
+					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-				<h2><span id="review_title">_________</span></h2>
-				<h3><span id="review_author">By _________</span></h3>
-				<p>Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p>
-				<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
-				<input type="submit" value="Submit My Piece" id="submit" />
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
-				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
-				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
-				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
-				<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
-				<a href="#step4" data-transition="slide" data-direction="reverse">4</a>
-				<a href="#step5" data-transition="slide" data-direction="reverse">5</a>
-				<a onclick="renderReview()" href="#review" data-transition="slide" class="ui-btn-active">Review</a>
+			<div data-role="page" id="step2">
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
+				</div>
+				<div data-role="content">
+					<div data-role="popup" id="tonal" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>Tonality is an organized system of tones (e.g., the tones of a major or minor scale) in which one tone (the tonic) becomes the central point to which the remaining tones are related. In tonality, the tonic (tonal center) is the tone of complete relaxation, the target toward which other tones lead. &mdash; Benward &amp; Saker</p>
+					</div>
+					<label for="tonality">Describe the <a href="#tonal" data-transition="slidedown" data-rel="popup" data-position-to="window">tonality</a> of your piece. Is your piece in a particular mode, a major or minor key, or atonal/tonal?  Or describe the pitch in your own words:</label>
+					<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
+					<input type="text" name="tonality" id="tonality" placeholder="Enter the tonality..." value="" />
+					<ul data-filter="true" data-input="#tonality" data-role="listview" data-filter-reveal="true" data-inset="true">
+						<li><a onclick="pop('#tonality','atonal')">Atonal</a></li>
+						<li><a onclick="pop('#tonality','tonal')">Tonal</a></li>
+						<li><a onclick="pop('#tonality','ionian')">Ionian</a></li>
+						<li><a onclick="pop('#tonality','dorian')">Dorian</a></li>
+						<li><a onclick="pop('#tonality','phrygian')">Phrygian</a></li>
+						<li><a onclick="pop('#tonality','lydian')">Lydian</a></li>
+						<li><a onclick="pop('#tonality','mixolydian')">Mixolydian</a></li>
+						<li><a onclick="pop('#tonality','aeolian')">Aeolian</a></li>
+						<li><a onclick="pop('#tonality','locrian')">Locrian</a></li>
+						<li><a onclick="pop('#tonality','major')">Major</a></li>
+						<li><a onclick="pop('#tonality','minor')">Minor</a></li>
+						<li><a onclick="pop('#tonality','major blues')">Major Blues</a></li>
+						<li><a onclick="pop('#tonality','minor blues')">Minor Blues</a></li>
+					</ul>
+				</div>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+					<a href="#step2" data-transition="slide" class="ui-btn-active">2</a>
+					<a href="#step3" data-transition="slide">3</a>
+					<a href="#step4" data-transition="slide">4</a>
+					<a href="#step5" data-transition="slide">5</a>
+					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
+				</div>
 			</div>
-		</div>
-	</form>
+			<div data-role="page" id="step3">
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
+				</div>
+				<div data-role="content">
+					<div data-role="popup" id="dynam" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>In music, <strong>dynamics</strong> refers to the volume of a sound or note, but can also refer to every aspect of the execution of a given piece, either stylistic (staccato, legato etc.) or functional (velocity). The term is also applied to the written or printed musical notation used to indicate dynamics. Dynamics are relative and do not refer to specific volume levels. &mdash; Wikipedia</p>
+					</div>
+					<label for="dynamics">Describe the <a href="#dynam" data-transition="slidedown" data-rel="popup" data-position-to="window">dynamics</a> of your composition. Is it loud or soft? Does your piece have a crescendo or decrescendo? Or use your own words:</label>
+					<input type="text" name="dynamics" id="dynamics" placeholder="Set the dynamics..." value="" />
+					<ul data-filter="true" data-input="#dynamics" data-role="listview" data-filter-reveal="true" data-inset="true">
+						<li><a onclick="pop('#dynamics','piano')">Piano (soft)</a></li>
+						<li><a onclick="pop('#dynamics','forte')">Forte (loud)</a></li>
+						<li><a onclick="pop('#dynamics','mezzo-piano')">Mezzo-piano (moderately soft)</a></li>
+						<li><a onclick="pop('#dynamics','mezzo-forte')">Mezzo-Forte (moderately loud)</a></li>
+						<li><a onclick="pop('#dynamics','pianissimo')">Pianissimo (very soft)</a></li>
+						<li><a onclick="pop('#dynamics','fortissimo')">Fortissimo (very loud)</a></li>
+						<li><a onclick="pop('#dynamics','crescendo')">Crescendo (become louder)</a></li>
+						<li><a onclick="pop('#dynamics','decrescendo')">Decrescendo (become softer)</a></li>
+					</ul>
+					<p>&nbsp;</p>
+					<label for="mood">What is the mood? Is it tranquil, brilliant, melancholy? Use your own words:</label>
+					<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
+					<input type="text" name="mood" id="mood" placeholder="Describe the mood..." />
+				</div>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+					<a href="#step3" data-transition="slide" class="ui-btn-active">3</a>
+					<a href="#step4" data-transition="slide">4</a>
+					<a href="#step5" data-transition="slide">5</a>
+					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
+				</div>
+			</div>
+			<div data-role="page" id="step4">
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
+				</div>
+				<div data-role="content">
+					<div data-role="popup" id="temp" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>In musical terminology, tempo ("time" in Italian; plural: tempi) is the speed or pace of a given piece or subsection thereof. &mdash; Wikipedia</p>
+					</div>
+					<label for="tempo">Describe the <a href="#temp" data-transition="slidedown" data-rel="popup" data-position-to="window">tempo</a> (speed):</label>
+					<input type="text" name="tempo" id="tempo" placeholder="Set the tempo..." value="" />
+					<ul data-filter="true" data-input="#tempo" data-role="listview" data-filter-reveal="true" data-inset="true">
+						<li><a onclick="pop('#tempo','largo')">Largo (very slow)</a></li>
+						<li><a onclick="pop('#tempo','adagio')">Adagio (slow)</a></li>
+						<li><a onclick="pop('#tempo','andante')">Andante (walking pace)</a></li>
+						<li><a onclick="pop('#tempo','moderato')">Moderato (moderately)</a></li>
+						<li><a onclick="pop('#tempo','allegro')">Allegro (fast)</a></li>
+						<li><a onclick="pop('#tempo','vivace')">Vivace (very fast)</a></li>
+					</ul>
+					<p>&nbsp;</p>
+					<label for="length">Length (3:00 to 7:00 mins): <strong id="len"></strong></label>
+					<input type="range" name="length" id="length" value="240" min="180" max="420" data-highlight="true" onchange="updateMins(this)" />
+				</div>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+					<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
+					<a href="#step4" data-transition="slide" class="ui-btn-active">4</a>
+					<a href="#step5" data-transition="slide">5</a>
+					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
+				</div>
+			</div>
+			<div data-role="page" id="step5">
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
+				</div>
+				<div data-role="content">
+					<label for="title">Almost there! Now it's time to give your piece a title:</label>
+					<input type="text" name="title" id="title" placeholder="Name the composition..." value="" />
+					<label for="author">Please enter the full name of the composer (leave it blank if you'd like to remain anonymous): </label>
+					<input type="text" name="author" id="author" placeholder="Anonymous..." />
+					<div data-role="popup" id="note" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>We will keep your email address private and only use it to notify you shortly before your composition is about to be performed by the ensemble.</p>
+					</div>
+					<label for="notify"><input type="checkbox" name="notify" id="notify" value="yes" /> Remind me shortly before my piece is played</label>
+					<div id="notify_email"><label for="email">Please enter your email for <a href="#note" data-transition="slidedown" data-rel="popup" data-position-to="window">notification</a> only:</label>
+					<input type="text" name="email" id="email" placeholder="Email..." /></div>
+				</div>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+					<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
+					<a href="#step4" data-transition="slide" data-direction="reverse">4</a>
+					<a href="#step5" data-transition="slide" class="ui-btn-active">5</a>
+					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
+				</div>
+			</div>
+			<div data-role="page" id="review">
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
+				</div>
+				<div data-role="content">
+					<div data-role="popup" id="perform" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>You agree that we can perform your piece during Northern Spark 2015 and post documentation that might include excerpts of your composition in audio and/or video format.</p>
+					</div>
+					<h2><span id="review_title">_________</span></h2>
+					<h3><span id="review_author">By _________</span></h3>
+					<p>Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span class="" id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p>
+					<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
+					<input type="submit" value="Submit My Piece" id="submit" />
+				</div>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
+					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
+					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
+					<a href="#step3" data-transition="slide" data-direction="reverse">3</a>
+					<a href="#step4" data-transition="slide" data-direction="reverse">4</a>
+					<a href="#step5" data-transition="slide" data-direction="reverse">5</a>
+					<a onclick="renderReview()" href="#review" data-transition="slide" class="ui-btn-active">Review</a>
+				</div>
+			</div>
+		</form>
 	</div>
 </body>
 </html>

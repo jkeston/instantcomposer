@@ -56,3 +56,12 @@ legend {
 .ui-controlgroup, fieldset.ui-controlgroup {
 	margin: 0 0;
 }
+.review-heading,
+.review-items {
+	color: hsl(200, 100%, 50%);
+	font-weight: bold;
+	text-decoration: underline;
+}
+.review-items {
+	font-size: 1.3em;
+}

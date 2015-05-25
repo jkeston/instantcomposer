@@ -21,23 +21,23 @@
 	}
 	function renderReview() {
 		if ($("#title").val().length > 0) {
-			$("#review_title").html($("#title").val());
+			$("#review_title").html($("#title").val()).addClass('review-heading');
 		}
 		if ($("#author").val().length > 0) {
-			$("#review_author").html('By '+$("#author").val());
+			$("#review_author").html('By '+$("#author").val()).addClass('review-heading');
 		}
 		if ($("#tonality").val().length > 0) {
-			$("#review_tonality").html($("#tonality").val());
+			$("#review_tonality").html($("#tonality").val()).addClass('review-items');
 		}
 		if ($("#tempo").val().length > 0) {
-			$("#review_tempo").html($("#tempo").val());
+			$("#review_tempo").html($("#tempo").val()).addClass('review-items');
 		}
-		$("#review_length").html( secs2Mins( $("#length").val() ) );
+		$("#review_length").html( secs2Mins($("#length").val())).addClass('review-items');
 		if ($("#mood").val().length > 0) {
-			$("#review_mood").html($("#mood").val());
+			$("#review_mood").html($("#mood").val()).addClass('review-items');
 		}
 		if ($("#dynamics").val().length > 0) {
-			$("#review_dynamics").html($("#dynamics").val());
+			$("#review_dynamics").html($("#dynamics").val()).addClass('review-items');
 		}
 		var inst = ($("#instruments").val() || []);
 		var n = inst.length;
@@ -53,6 +53,6 @@
 			}
 		}
 		if ( output.length > 0 ) {
-			$("#review_instruments").html( output );
+			$("#review_instruments").html( output ).addClass('review-items');
 		}
 	}
