@@ -6,6 +6,7 @@
 	});
 	function pop(e,f) {
 		$(e).val(f);
+		$('ul[data-input="'+e+'"] li').removeClass().addClass('ui-screen-hidden');
 	}
 	function updateMins(e) {
 		$('#len').html(secs2Mins(e.value));
