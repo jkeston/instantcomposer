@@ -14,7 +14,7 @@
 	<div data-role="main">
 		<form class="ui-filterable">
 		<div data-role="page" id="intro">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
@@ -25,9 +25,9 @@
 				</div>
 				<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
 				<p>Through a process that may take less than a minute you can write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
-				<button><a href="#step1" data-transition="slide">Start Composing</a></button>
+				<button class="start"><a href="#step1" data-transition="slide">Start Composing</a></button>
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed">
+			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 				<a href="#intro" data-transition="slide" class="ui-btn-active">Home</a>
 				<a href="#step1" data-transition="slide">1</a>
 				<a href="#step2" data-transition="slide">2</a>
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<div data-role="page" id="step1">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
@@ -57,7 +57,7 @@
 				</select>
 				<p>* Some instruments might be substituted if not available for your performance.</p>
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed">
+			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
 				<a href="#step1" data-transition="slide" class="ui-btn-active">1</a>
 				<a href="#step2" data-transition="slide">2</a>
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		<div data-role="page" id="step2">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
@@ -96,7 +96,7 @@
 					<li><a onclick="pop('#tonality','minor blues')">Minor Blues</a></li>
 				</ul>
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed">
+			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
 				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 				<a href="#step2" data-transition="slide" class="ui-btn-active">2</a>
@@ -107,7 +107,7 @@
 			</div>
 		</div>
 		<div data-role="page" id="step3">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
@@ -133,7 +133,7 @@
 				<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
 				<input type="text" name="mood" id="mood" placeholder="Describe the mood..." />
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed">
+			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
 				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
@@ -144,7 +144,7 @@
 			</div>
 		</div>
 		<div data-role="page" id="step4">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
@@ -167,7 +167,7 @@
 				<label for="length">Length (3:00 to 7:00 mins): <strong id="len"></strong></label>
 				<input type="range" name="length" id="length" value="240" min="180" max="420" data-highlight="true" onchange="updateMins(this)" />
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed">
+			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
 				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
@@ -178,7 +178,7 @@
 			</div>
 		</div>
 		<div data-role="page" id="step5">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
@@ -195,7 +195,7 @@
 				<div id="notify_email"><label for="email">Please enter your email for <a href="#note" data-transition="slidedown" data-rel="popup" data-position-to="window">notification</a> only:</label>
 				<input type="text" name="email" id="email" placeholder="Email..." /></div>
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed">
+			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
 				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
@@ -206,7 +206,7 @@
 			</div>
 		</div>
 		<div data-role="page" id="review">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 				<p class="topHead">Instant Composer</p>
 				<p class="subHead">Mad-libbed Music</p>
 			</div>
@@ -221,7 +221,7 @@
 				<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
 				<input type="submit" value="Submit My Piece" id="submit" />
 			</div>
-			<div data-role="footer" style="text-align:center" data-position="fixed">
+			<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 				<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
 				<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 				<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
