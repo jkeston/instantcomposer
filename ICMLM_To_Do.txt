@@ -20,3 +20,6 @@ TO DO:
 11. Get a stage ordered (8' x 12' x 18") for delivery (Ariel)
 12. Get Abe and Mike involved
 13. Test mobile app / visualization on site
+
+
+adam-test push
