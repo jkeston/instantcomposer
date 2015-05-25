@@ -1,7 +1,7 @@
 	$(document).ready(function(){
 		$("input").attr("maxlength", 48);
 		$("#notify").click(function(){
-			$("#notify_email").toggle();
+			$("#notify_email").slideToggle(300, "easeInOutSine");
 		});
 	});
 	function pop(e,f) {
