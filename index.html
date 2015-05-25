@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Instant Composer: Mad-libbed Music</title>
@@ -7,66 +7,7 @@
 	<link rel="stylesheet" href="css/webapp.css" />
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-	<script>
-	$(document).ready(function(){
-		$("input").attr("maxlength", 48);
-		$("#notify").click(function(){
-			$("#notify_email").toggle();
-		});
-	});
-	function pop(e,f) {
-		$(e).val(f);
-	}
-	function updateMins(e) {
-		$('#len').html(secs2Mins(e.value));		
-	}
-	function secs2Mins(e) {
-		var m = Math.floor(e / 60);
-		var s = e - (m * 60);
-		if ( s < 10 ) {
-			s = '0' + s;
-		}
-		var l = m + ':' + s;
-		return l;
-	}
-	function renderReview() {
-		if ($("#title").val().length > 0) {
-			$("#review_title").html($("#title").val());
-		}
-		if ($("#author").val().length > 0) {
-			$("#review_author").html('By '+$("#author").val());
-		}
-		if ($("#tonality").val().length > 0) {
-			$("#review_tonality").html($("#tonality").val());
-		}
-		if ($("#tempo").val().length > 0) {
-			$("#review_tempo").html($("#tempo").val());
-		}
-		$("#review_length").html( secs2Mins( $("#length").val() ) );
-		if ($("#mood").val().length > 0) {
-			$("#review_mood").html($("#mood").val());
-		}
-		if ($("#dynamics").val().length > 0) {
-			$("#review_dynamics").html($("#dynamics").val());
-		}		
-		var inst = ($("#instruments").val() || []);
-		var n = inst.length;
-		var output = '';
-		for ( i = 0; i < n; ++i ) {
-			if ( inst[i] != 'undefined' ) {
-				if ( i < n-1 ) {
-					output += inst[i]+', ';
-				}
-				if ( i == n-1 ) {
-					output += ' and ' + inst[i];
-				}
-			}
-		}
-		if ( output.length > 0 ) {
-			$("#review_instruments").html( output );
-		}
-	}
-	</script>
+	<script src="js/scripts.js"></script>
 </head>
 <body>
 	<div data-role="main">
@@ -146,7 +87,7 @@
 					<li><a onclick="pop('#tonality','dorian')">Dorian</a></li>
 					<li><a onclick="pop('#tonality','phrygian')">Phrygian</a></li>
 					<li><a onclick="pop('#tonality','lydian')">Lydian</a></li>
-					<li><a onclick="pop('#tonality','mixolydian')">Mixolydian</a></li>					
+					<li><a onclick="pop('#tonality','mixolydian')">Mixolydian</a></li>
 					<li><a onclick="pop('#tonality','aeolian')">Aeolian</a></li>
 					<li><a onclick="pop('#tonality','locrian')">Locrian</a></li>
 					<li><a onclick="pop('#tonality','major')">Major</a></li>
@@ -276,7 +217,7 @@
 				</div>
 				<h2><span id="review_title">_________</span></h2>
 				<h3><span id="review_author">By _________</span></h3>
-				<p>Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p> 
+				<p>Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p>
 				<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
 				<input type="submit" value="Submit My Piece" id="submit" />
 			</div>
