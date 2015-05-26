@@ -8,6 +8,20 @@ p {
 p.review {
 	line-height: 1.8em;
 }
+button {
+	padding: 0 !important;
+}
+button, a {
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+button > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 11px 0;
+}
 #notify_email {
 	display: none;
 }
@@ -70,4 +84,35 @@ legend {
 }
 .review-items {
 	font-size: 1.3em;
+}
+/*---------- In Page Navigation ----------*/
+button.navPrev,
+button.navNext {
+	width: 49% !important;
+	display: inline-block !important;
+	padding: 0;
+}
+button.nav-btn > a,
+button.nav-btn.navSubmit {
+	font-weight: 100;
+}
+button.nav-btn.navStart,
+button.nav-btn.navNext,
+button.nav-btn.navSubmit {
+	background-color: #38c;
+}
+button.nav-btn.navStart > a.ui-link,
+button.navNext > a.ui-link,
+button.nav-btn.navSubmit {
+	color: #fff;
+	text-shadow: none;
+}
+button.nav-btn.navStart:active > a.ui-link,
+button.nav-btn.navStart:hover > a.ui-link,
+button.navNext:active > a.ui-link,
+button.navNext:hover > a.ui-link {
+	color: #38c;
+}
+button.nav-btn.navSubmit {
+	padding: 11px 0 !important;
 }

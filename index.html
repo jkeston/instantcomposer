@@ -13,7 +13,7 @@
 <body>
 	<div data-role="main">
 		<form class="ui-filterable">
-			<div data-role="page" id="intro">
+			<div data-role="page" id="intro"><!--Begin Intro-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
 					<p class="subHead">Mad-libbed Music</p>
@@ -25,7 +25,7 @@
 					</div>
 					<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
 					<p>Through a process that may take less than a minute you can write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
-					<button class="start"><a href="#step1" data-transition="slide">Start Composing</a></button>
+					<button class="nav-btn navStart"><a href="#step1" data-transition="slide">Start Composing</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" class="ui-btn-active">Home</a>
@@ -36,8 +36,8 @@
 					<a href="#step5" data-transition="slide">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-			</div>
-			<div data-role="page" id="step1">
+			</div><!--End Intro-->
+			<div data-role="page" id="step1"><!--Begin Step 1-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
 					<p class="subHead">Mad-libbed Music</p>
@@ -56,6 +56,8 @@
 						<option value="violin">Violin</option>
 					</select>
 					<p>* Some instruments might be substituted if not available for your performance.</p>
+					<button class="nav-btn navPrev"><a href="#intro" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext"><a href="#step2" data-transition="slide">Next</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
@@ -66,8 +68,8 @@
 					<a href="#step5" data-transition="slide">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-			</div>
-			<div data-role="page" id="step2">
+			</div><!--End Step 1-->
+			<div data-role="page" id="step2"><!--Begin Step 2-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
 					<p class="subHead">Mad-libbed Music</p>
@@ -95,6 +97,8 @@
 						<li><a onclick="pop('#tonality','major blues')">Major Blues</a></li>
 						<li><a onclick="pop('#tonality','minor blues')">Minor Blues</a></li>
 					</ul>
+					<button class="nav-btn navPrev"><a href="#step1" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext"><a href="#step3" data-transition="slide">Next</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
@@ -105,8 +109,8 @@
 					<a href="#step5" data-transition="slide">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-			</div>
-			<div data-role="page" id="step3">
+			</div><!--End Step 2-->
+			<div data-role="page" id="step3"><!--Begin Step 3-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
 					<p class="subHead">Mad-libbed Music</p>
@@ -132,6 +136,8 @@
 					<label for="mood">What is the mood? Is it tranquil, brilliant, melancholy? Use your own words:</label>
 					<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
 					<input type="text" name="mood" id="mood" placeholder="Describe the mood..." />
+					<button class="nav-btn navPrev"><a href="#step2" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext"><a href="#step4" data-transition="slide">Next</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
@@ -142,8 +148,8 @@
 					<a href="#step5" data-transition="slide">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-			</div>
-			<div data-role="page" id="step4">
+			</div><!--End Step 3-->
+			<div data-role="page" id="step4"><!--Begin Step 4-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
 					<p class="subHead">Mad-libbed Music</p>
@@ -166,6 +172,8 @@
 					<p>&nbsp;</p>
 					<label for="length">Length (3:00 to 7:00 mins): <strong id="len"></strong></label>
 					<input type="range" name="length" id="length" value="240" min="180" max="420" data-highlight="true" onchange="updateMins(this)" />
+					<button class="nav-btn navPrev"><a href="#step3" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext"><a href="#step5" data-transition="slide">Next</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
@@ -176,8 +184,8 @@
 					<a href="#step5" data-transition="slide">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-			</div>
-			<div data-role="page" id="step5">
+			</div><!--End Step 4-->
+			<div data-role="page" id="step5"><!--Begin Step 5-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
 					<p class="subHead">Mad-libbed Music</p>
@@ -204,8 +212,10 @@
 					<a href="#step5" data-transition="slide" class="ui-btn-active">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-			</div>
-			<div data-role="page" id="review">
+				<button class="nav-btn navPrev"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button>
+				<button class="nav-btn navNext"><a href="#review" data-transition="slide">Review</a></button>
+			</div><!--End Step 5-->
+			<div data-role="page" id="review"><!--Begin Review-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
 					<p class="subHead">Mad-libbed Music</p>
@@ -219,7 +229,9 @@
 					<h3><span id="review_author">By _________</span></h3>
 					<p class="review">Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span class="" id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p>
 					<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
-					<input type="submit" value="Submit My Piece" id="submit" />
+					<!-- <input type="submit" value="Submit My Piece" id="submit" /> -->
+					<button class="nav-btn navSubmit" type="submit" value="Submit My Piece" id="submit">Submit My Piece</button>
+					<button class="nav-btn navPrev"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
@@ -230,7 +242,7 @@
 					<a href="#step5" data-transition="slide" data-direction="reverse">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide" class="ui-btn-active">Review</a>
 				</div>
-			</div>
+			</div><!--End Review-->
 		</form>
 	</div>
 </body>
