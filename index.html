@@ -212,8 +212,8 @@
 					<a href="#step5" data-transition="slide" class="ui-btn-active">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-				<button class="nav-btn navPrev"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button>
-				<button class="nav-btn navNext"><a onclick="renderReview()" href="#review" data-transition="slide">Review</a></button>
+				<!-- <button class="nav-btn navPrev"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button> -->
+				<button class="nav-btn navNext navReview"><a onclick="renderReview()" href="#review" data-transition="slide">Review</a></button>
 			</div><!--End Step 5-->
 			<div data-role="page" id="review"><!--Begin Review-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
@@ -231,7 +231,6 @@
 					<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
 					<!-- <input type="submit" value="Submit My Piece" id="submit" /> -->
 					<button class="nav-btn navSubmit" type="submit" value="Submit My Piece" id="submit">Submit My Piece</button>
-					<button class="nav-btn navPrev"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
