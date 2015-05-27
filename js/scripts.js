@@ -60,3 +60,54 @@
 			$("#review_instruments").html( output ).addClass('review-items');
 		}
 	}
+	function validateEmail(email) {
+		var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+		return re.test(email);
+	}
+	function validate_score() {
+		var valid = true;
+		var message = '<h3>Please fix the following:</h3>';
+		var inst = ($("#instruments").val() || []);
+		if ( $("#title").val().length < 1 ) {
+			message += "Give your piece a title.<br />\n";
+			valid = false;
+		}
+		if ( inst.length < 2 || inst.length > 7 ) {
+			message += "Choose two to seven instruments.<br />\n";
+			valid = false;
+		}
+		if ( $("#tonality").val().length < 1 ) {
+			message += "Describe the tonality of your piece.<br />\n";
+			valid = false;
+		}
+		if ( $("#dynamics").val().length < 1 ) {
+			message += "Define the dynamics of your piece.<br />\n";
+			valid = false;
+		}
+		if ( $("#mood").val().length < 1 ) {
+			message += "Set the mood of your piece.<br />\n";
+			valid = false;
+		}
+		if ( $("#tempo").val().length < 1 ) {
+			message += "Set the tempo of your piece.<br />\n";
+			valid = false;
+		}
+		if ( $('#notify').is(':checked') ) {
+			if ( !validateEmail($('#email').val()) ) {
+				message += "Enter a valid email for notification.<br />\n";
+				valid = false;
+			}
+		}
+		if ( $('#agree').is(':checked') == false ) {
+			message += "Please allow your piece to be performed.<br />\n";
+			valid = false;
+		}
+		if ( !valid ) {
+			// invoke the dialog
+			$("#validate p").html( message );
+			$( "#validate" ).popup('open',{
+				transition: 'slidedown'
+			})
+		}
+		return valid;
+	}

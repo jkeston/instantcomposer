@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div data-role="main">
-		<form class="ui-filterable">
+		<form class="ui-filterable" method="post" action="queue_score.php" onsubmit="return validate_score()">
 			<div data-role="page" id="intro"><!--Begin Intro-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
@@ -226,6 +226,10 @@
 					<div data-role="popup" id="perform" class="ui-content icmlm_popup">
 						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
 						<p>You agree that we can perform your piece during Northern Spark 2015 and post documentation that might include excerpts of your composition in audio and/or video format.</p>
+					</div>
+					<div data-role="popup" id="validate" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>HELLO WORLD!</p>
 					</div>
 					<h2><span id="review_title">_________</span></h2>
 					<h3><span id="review_author">By _________</span></h3>
