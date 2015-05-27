@@ -100,7 +100,7 @@ button.nav-btn.navSubmit {
 button.nav-btn.navStart,
 button.nav-btn.navNext,
 button.nav-btn.navSubmit {
-	background-color: #38c;
+	background-color: #bc2024;
 }
 button.nav-btn.navStart > a.ui-link,
 button.navNext > a.ui-link,
@@ -111,8 +111,10 @@ button.nav-btn.navSubmit {
 button.nav-btn.navStart:active > a.ui-link,
 button.nav-btn.navStart:hover > a.ui-link,
 button.navNext:active > a.ui-link,
-button.navNext:hover > a.ui-link {
-	color: #38c;
+button.navNext:hover > a.ui-link,
+button.navPrev:active > a.ui-link,
+button.navPrev:hover > a.ui-link {
+	color: #fff;
 }
 button.nav-btn.navReview {
 	margin-left: 16px;
