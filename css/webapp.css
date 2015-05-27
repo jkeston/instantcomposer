@@ -33,13 +33,13 @@ button > a {
 	margin: 0 !important;
 }
 p.topHead {
-	margin: 0.5em 0 0 0;
+	margin: 0.25em 0 0 0;
 	font-size: 2em;
 	text-align: center;
 }
 p.subHead {
 	font-size: 1.5em;
-	margin-top: 0;
+	margin: 0 0 0.5em 0;
 	text-align: center;
 }
 .icmlm_popup {

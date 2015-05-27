@@ -27,6 +27,9 @@
 		if ($("#author").val().length > 0) {
 			$("#review_author").html('By '+$("#author").val()).addClass('review-heading');
 		}
+		else {
+			$("#review_author").html('By anonymous').addClass('review-heading');
+		}
 		if ($("#tonality").val().length > 0) {
 			$("#review_tonality").html($("#tonality").val()).addClass('review-items');
 		}
