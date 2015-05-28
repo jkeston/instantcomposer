@@ -58,6 +58,7 @@
 		}
 		if ( output.length > 0 ) {
 			$("#review_instruments").html( output ).addClass('review-items');
+			$("#inst_joined").val() = output;
 		}
 	}
 	function validateEmail(email) {
