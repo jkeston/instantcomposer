@@ -78,7 +78,7 @@ legend {
 }
 .review-heading,
 .review-items {
-	color: hsl(200, 100%, 50%);
+	color: #d31217;
 	font-weight: bold;
 	text-decoration: underline;
 }
@@ -92,18 +92,23 @@ button.navNext {
 	display: inline-block !important;
 	padding: 0;
 }
+
 button.nav-btn > a,
 button.nav-btn.navSubmit {
 	font-weight: 100;
 	text-decoration: none;
 }
 button.nav-btn.navStart,
+button.nav-btn.navPrev,
 button.nav-btn.navNext,
+button.nav-btn.navReview,
 button.nav-btn.navSubmit {
 	background-color: #bc2024;
 }
 button.nav-btn.navStart > a.ui-link,
+button.navPrev > a.ui-link,
 button.navNext > a.ui-link,
+button.nav-btn.navReview > a.ui-link,
 button.nav-btn.navSubmit {
 	color: #fff;
 	text-shadow: none;
@@ -113,12 +118,15 @@ button.nav-btn.navStart:hover > a.ui-link,
 button.navNext:active > a.ui-link,
 button.navNext:hover > a.ui-link,
 button.navPrev:active > a.ui-link,
-button.navPrev:hover > a.ui-link {
+button.navPrev:hover > a.ui-link, {
 	color: #fff;
 }
+
 button.nav-btn.navReview {
-	margin-left: 16px;
-}
+    margin-left: 13px;
+    width: 98.5%;
+ }
+
 button.nav-btn.navSubmit {
 	padding: 11px 0 !important;
 }
