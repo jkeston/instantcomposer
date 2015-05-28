@@ -78,7 +78,7 @@ legend {
 }
 .review-heading,
 .review-items {
-	color: hsl(200, 100%, 50%);
+	color: #d31217;
 	font-weight: bold;
 	text-decoration: underline;
 }

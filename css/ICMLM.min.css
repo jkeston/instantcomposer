@@ -99,14 +99,14 @@ label.ui-btn {
 .ui-flipswitch.ui-corner-all,
 /* Count bubble */
 .ui-li-count {
-	-webkit-border-radius: 1.9em /*{global-radii-buttons}*/;
-	border-radius: 1.9em /*{global-radii-buttons}*/;
+	-webkit-border-radius: 0.6em /*{global-radii-buttons}*/;
+	border-radius: 0.6em /*{global-radii-buttons}*/;
 }
 /* Icon-only buttons */
 .ui-btn-icon-notext.ui-btn-corner-all,
 .ui-btn-icon-notext.ui-corner-all {
-	-webkit-border-radius: 1em;
-	border-radius: 1em;
+	-webkit-border-radius: 0.6em;
+	border-radius: 0.6em;
 }
 /* Radius clip workaround for cleaning up corner trapping */
 .ui-btn-corner-all,
@@ -314,7 +314,7 @@ html head + body .ui-btn.ui-btn-a:focus,
 html .ui-bar-a .ui-focus,html .ui-body-a .ui-focus,
 html body .ui-group-theme-a .ui-focus,
 html head + body .ui-btn-a.ui-focus,
-html head + body .ui-body-a.ui-focus{-webkit-box-shadow:0 0 12px #990028 ;-moz-box-shadow:0 0 12px #990028 ;box-shadow:0 0 12px #990028 ;}
+html head + body .ui-body-a.ui-focus{-webkit-box-shadow:0 0 12px #000000 ;-moz-box-shadow:0 0 12px #000000 ;box-shadow:0 0 12px #000000 ;}
 
 .ui-disabled,.ui-state-disabled,button[disabled],
 .ui-select .ui-btn.ui-state-disabled{filter:Alpha(Opacity=30);opacity:.3;cursor:default !important;pointer-events:none;}
