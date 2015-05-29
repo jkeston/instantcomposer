@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div data-role="main">
-		<form class="ui-filterable" method="post" action="queue_score.php" onsubmit="return validate_score()" data-ajax="false">
+		<form method="post" class="ui-filterable" onsubmit="return validate_score()" data-ajax="false" id="queuescore">
 			<div data-role="page" id="intro"><!--Begin Intro-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
 					<p class="topHead">Instant Composer</p>
@@ -232,9 +232,9 @@
 						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
 						<p>HELLO WORLD!</p>
 					</div>
-					<h2><span id="review_title">_________</span></h2>
-					<h3><span id="review_author">By _________</span></h3>
-					<p class="review">Perform a piece for <span id="review_instruments">_________</span>. Play within a tonality of <span class="" id="review_tonality">_________</span>, and within dynamics that (are) <span id="review_dynamics">_________</span>. Play the composition so that is sets a <span id="review_mood">_________</span> mood at a tempo of <span id="review_tempo">_________</span>. This piece will be performed for <span id="review_length">_________</span> minutes.</p>
+					<h2><a href="#step5" data-transition="slide" data-direction="reverse"><span id="review_title">_________</span></a></h2>
+					<h3><a href="#step5" data-transition="slide" data-direction="reverse"><span id="review_author">By _________</span></a></h3>
+					<p class="review">Perform a piece for <a href="#step1" data-transition="slide" data-direction="reverse"><span id="review_instruments">_________</span></a>. Play within a tonality of <a href="#step2" data-transition="slide" data-direction="reverse"><span id="review_tonality">_________</span></a>, and within dynamics that (are) <a href="#step3" data-transition="slide" data-direction="reverse"><span id="review_dynamics">_________</span></a>. Play the composition so that is sets a <a href="#step3" data-transition="slide" data-direction="reverse"><span id="review_mood">_________</span></a> mood at a tempo of <a href="#step4" data-transition="slide" data-direction="reverse"><span id="review_tempo">_________</span></a>. This piece will be performed for <a href="#step4" data-transition="slide" data-direction="reverse"><span id="review_length">_________</span></a> minutes.</p>
 					<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
 					<!-- <input type="submit" value="Submit My Piece" id="submit" /> -->
 					<button class="nav-btn navSubmit" type="submit" value="Submit My Piece" id="submit">Submit My Piece</button>
@@ -249,6 +249,18 @@
 					<a onclick="renderReview()" href="#review" data-transition="slide" class="ui-btn-active">Review</a>
 				</div>
 			</div><!--End Review-->
+			<div data-role="page" id="thanks"><!--Begin Thanks-->
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
+					<p class="topHead">Instant Composer</p>
+					<p class="subHead">Mad-libbed Music</p>
+				</div>
+				<div data-role="content">
+					<h3 style="text-align:center;">Thank you for your composition. We will perform it in the order received.</h3>
+				</div>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
+					<a href="index.html" data-ajax="false" data-transition="slide" class="ui-btn-active">Back to Composing!</a>
+				</div>
+			</div><!--End Thanks-->
 		</form>
 	</div>
 </body>
