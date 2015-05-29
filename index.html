@@ -205,6 +205,8 @@
 					<label for="notify"><input type="checkbox" name="notify" id="notify" value="yes" /> Remind me shortly before my piece is played</label>
 					<div id="notify_email"><label for="email">Please enter your email for <a href="#note" data-transition="slidedown" data-rel="popup" data-position-to="window">notification</a> only:</label>
 					<input type="text" name="email" id="email" placeholder="Email..." /></div>
+					<button class="nav-btn navPrev"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext"><a onclick="renderReview()" href="#review" data-transition="slide">Review</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="#intro" data-transition="slide" data-direction="reverse">Home</a>
@@ -215,8 +217,6 @@
 					<a href="#step5" data-transition="slide" class="ui-btn-active">5</a>
 					<a onclick="renderReview()" href="#review" data-transition="slide">Review</a>
 				</div>
-				<!-- <button class="nav-btn navPrev"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button> -->
-				<button class="nav-btn navReview"><a onclick="renderReview()" href="#review" data-transition="slide">Review</a></button>
 			</div><!--End Step 5-->
 			<div data-role="page" id="review"><!--Begin Review-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">

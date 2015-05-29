@@ -21,7 +21,8 @@
 	else {
 		$query = "INSERT INTO icmlm_scores (
 			title,		
-			author,		
+			author,
+			email,
 			instruments,
 			tonality,	
 			dynamics,	
@@ -30,8 +31,9 @@
 			length,		
 			queue_time )
 			VALUES ( '".
-			$f['title']."','".		
-			$f['author']."','".		
+			$f['title']."','".
+			$f['author']."','".
+			$f['email']."','".
 			$f['inst_joined']."','".
 			$f['tonality']."','".
 			$f['dynamics']."','".
