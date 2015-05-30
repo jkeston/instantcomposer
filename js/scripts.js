@@ -70,32 +70,32 @@ function validate_score() {
 	var message = '<h3>Please fix the following:</h3>';
 	var inst = ($("#instruments").val() || []);
 	if ( $("#title").val().length < 1 ) {
-		message += "Give your piece a title.<br />\n<br />\n";
+		message += "Give your piece a title.<br />\n";
 		valid = false;
 	}
 	if ( inst.length < 2 || inst.length > 7 ) {
-		message += "Choose two to seven instruments.<br />\n<br />\n";
+		message += "Choose two to seven instruments.<br />\n";
 		valid = false;
 	}
 	if ( $("#tonality").val().length < 1 ) {
-		message += "Describe the tonality of your piece.<br />\n<br />\n";
+		message += "Describe the tonality of your piece.<br />\n";
 		valid = false;
 	}
 	if ( $("#dynamics").val().length < 1 ) {
-		message += "Define the dynamics of your piece.<br />\n<br />\n";
+		message += "Define the dynamics of your piece.<br />\n";
 		valid = false;
 	}
 	if ( $("#mood").val().length < 1 ) {
-		message += "Set the mood of your piece.<br />\n<br />\n";
+		message += "Set the mood of your piece.<br />\n";
 		valid = false;
 	}
 	if ( $("#tempo").val().length < 1 ) {
-		message += "Set the tempo of your piece.<br />\n<br />\n";
+		message += "Set the tempo of your piece.<br />\n";
 		valid = false;
 	}
 	if ( $('#notify').is(':checked') ) {
 		if ( !validateEmail($('#email').val()) ) {
-			message += "Enter a valid email for notification.<br />\n<br />\n";
+			message += "Enter a valid email for notification.<br />\n";
 			valid = false;
 		}
 	}
@@ -126,6 +126,7 @@ function validate_score() {
             success: function (result) {
             	// alert('result|'+result.status);
                 if( result.status ) {
+                	$('#total_queued').html( result.queued_pending );
                     $.mobile.navigate("#thanks"); 
                     valid = true;                       
                 }
@@ -146,8 +147,9 @@ function validate_score() {
         });		
 	}
 	if ( !valid ) {
+		// console.log('valid|'+valid+"|message|"+message);
 		// invoke the popup
-		$("#validate p").html( message );
+		$( "#validate p" ).html( message );
 		$( "#validate" ).popup('open',{
 			transition: 'slidedown'
 		});

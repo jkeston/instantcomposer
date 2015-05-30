@@ -42,7 +42,9 @@
 			$f['length'].",".
 			'NOW() )';
 		if ( mysql_query($query) ) {
-			$output = array('status' => true);
+			$q = "SELECT COUNT(*) FROM icmlm_scores WHERE status='queued' OR status='pending' ";
+			$t = mysql_fetch_row(mysql_query($q));
+			$output = array('status' => true,'queued_pending' => $t[0]);
 			// error_log("ENTERED|".print_r($output,true)."|");
     		echo json_encode($output);
 		}

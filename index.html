@@ -26,7 +26,7 @@
 						<p><strong>Pauline Oliveros</strong> is an American composer and accordionist who is a central figure in the development of experimental and post-war electronic art music. She was a founding member of the San Francisco Tape Music Center in the 1960s, and served as its director. She has taught music at Mills College, the University of California, San Diego, Oberlin Conservatory of Music, and Rensselaer Polytechnic Institute. Oliveros has written books, formulated new music theories and investigated new ways to focus attention on music including her concepts of "Deep Listening" and "sonic awareness". &mdash; Wikipedia</p>
 					</div>
 					<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
-					<p>Through a process that may take less than a minute you can write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
+					<p>Through a process that can take less than a minute you will write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
 					<button class="nav-btn navStart"><a href="#step1" data-transition="slide">Start Composing</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
@@ -224,18 +224,23 @@
 					<p class="subHead">Mad-libbed Music</p>
 				</div>
 				<div data-role="content">
-					<div data-role="popup" id="perform" class="ui-content icmlm_popup">
-						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-						<p>You agree that we can perform your piece during Northern Spark 2015 and post documentation that might include excerpts of your composition in audio and/or video format.</p>
-					</div>
 					<div data-role="popup" id="validate" class="ui-content icmlm_popup">
 						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-						<p>HELLO WORLD!</p>
+						<p>REPLACED WITH VALIDATE MESSAGE</p>
+					</div>
+					<div data-role="popup" id="perform" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>You agree that we can perform your piece during Northern Spark 2015 and post online documentation that might include excerpts of your composition in audio and/or video format.</p>
+					</div>
+					<div data-role="popup" id="moderation" class="ui-content icmlm_popup">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p>Your score will be moderated for language and intelligibility. Northern Spark is a family event. Have fun with your score, but please use discretion! :-)</p>
 					</div>
 					<h2><a href="#step5" data-transition="slide" data-direction="reverse"><span id="review_title">_________</span></a></h2>
 					<h3><a href="#step5" data-transition="slide" data-direction="reverse"><span id="review_author">By _________</span></a></h3>
-					<p class="review">Perform a piece for <a href="#step1" data-transition="slide" data-direction="reverse"><span id="review_instruments">_________</span></a>. Play within a tonality of <a href="#step2" data-transition="slide" data-direction="reverse"><span id="review_tonality">_________</span></a>, and within dynamics that (are) <a href="#step3" data-transition="slide" data-direction="reverse"><span id="review_dynamics">_________</span></a>. Play the composition so that is sets a <a href="#step3" data-transition="slide" data-direction="reverse"><span id="review_mood">_________</span></a> mood at a tempo of <a href="#step4" data-transition="slide" data-direction="reverse"><span id="review_tempo">_________</span></a>. This piece will be performed for <a href="#step4" data-transition="slide" data-direction="reverse"><span id="review_length">_________</span></a> minutes.</p>
+					<p class="review">Perform a piece for <a href="#step1" data-transition="slide" data-direction="reverse"><span id="review_instruments">_________</span></a>. Play within a tonality of <a href="#step2" data-transition="slide" data-direction="reverse"><span id="review_tonality">_________</span></a>, and within dynamics that (are) <a href="#step3" data-transition="slide" data-direction="reverse"><span id="review_dynamics">_________</span></a>. Play the composition so that is sets a(n) <a href="#step3" data-transition="slide" data-direction="reverse"><span id="review_mood">_________</span></a> mood at a tempo of <a href="#step4" data-transition="slide" data-direction="reverse"><span id="review_tempo">_________</span></a>. This piece will be performed for <a href="#step4" data-transition="slide" data-direction="reverse"><span id="review_length">_________</span></a> minutes.</p>
 					<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
+					<p>* Once you <a href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window">agree</a> your piece will be <a href="#moderation" data-transition="slidedown" data-rel="popup" data-position-to="window">moderated</a> for content.</p>
 					<!-- <input type="submit" value="Submit My Piece" id="submit" /> -->
 					<button class="nav-btn navSubmit" type="submit" value="Submit My Piece" id="submit">Submit My Piece</button>
 				</div>
@@ -255,7 +260,7 @@
 					<p class="subHead">Mad-libbed Music</p>
 				</div>
 				<div data-role="content">
-					<h3 style="text-align:center;">Thank you for your composition. We will perform it in the order received.</h3>
+					<h3 style="text-align:center;">Thank you for your composition!<br /><br />There are <span id="total_queued">X</span> scores queued and/or pending moderation.<br /><br />We will perform your piece in the order received.</h3>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="a">
 					<a href="index.html" data-ajax="false" data-transition="slide" class="ui-btn-active">Back to Composing!</a>
