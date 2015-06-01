@@ -1,8 +1,5 @@
 <?
 	include('icmlm_config.php');
-	if ( count($_POST) > 0 ) {
-		include('mod_actions.php');
-	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,15 +11,40 @@
 	<script src="js/jquery-ui.min.js"></script>
 	<script>
 	var playing = false;
+	window.onload = function() {
+		loadQueued();
+	}
+	function loadQueued() {
+		$.ajax({
+			url: 'start_score.php',
+         data: { 
+				action: 'load'
+			},
+         type: 'post',                   
+         async: 'false',
+			dataType: 'json',
+            success: function(result) {
+            	// alert('result|'+result.status);
+            	alert(result);
+            },
+        });
+        return false;	
+	}
+
+
+
+
+
+	}
 	function startScore(sid) {
 		$.ajax({
 			url: 'start_score.php',
-            data: { 
-            	action: 'start', 
-            	sid: sid
-            },
-            type: 'post',                   
-            async: 'false',
+         data: { 
+				action: 'start', 
+				sid: sid
+			},
+         type: 'post',                   
+         async: 'false',
 			dataType: 'json',
             success: function(result) {
             	// alert('result|'+result.status);
@@ -99,7 +121,7 @@
 				playing = false;
 			}
 		}
-	}, 100);
+	}, 1000);
 	</script>
 	<style>
 	* {
@@ -145,46 +167,6 @@
 </head>
 <body>
 	<main>
-		<header>
-			<h1>Instant Composer Moderation</h1>
-		</header>
-
-<?php
-	if ($_COOKIE['icmlm_auth'] != 'madlibbed229') {
-?>
-	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-		<input type="hidden" name="action" value="authenticate" />
-		<p>Please enter the password to moderate the scores:</p>
-		<input type="password" name="icmlm_pw" />
-		<input type="submit" value="Login" />
-	</form>
-<?php
-	}
-	else {
-?>
-		<div id="moderation">
-			<h2>Scores in Moderation</h3>
-			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-				<input type="hidden" name="action" value="moderate" />
-<?php
-		// Load pending scores
-		$query = "SELECT * FROM icmlm_scores WHERE status = 'pending' ORDER BY queue_time ASC";
-		$results = mysql_query($query);
-		while( $row = mysql_fetch_array($results) ) {
-?>
-				<h3><strong><?php echo $row['title']; ?></strong></h2>
-				<h4><strong>By <?php echo $row['author']; ?></strong></h3>
-				<p class="review">Perform a piece for <strong><?php echo $row['instruments']; ?></strong>. Play within a tonality of <strong><?php echo $row['tonality']; ?></strong>, and within dynamics that (are) <strong><?php echo $row['dynamics']; ?></strong>. Play the composition so that is sets a(n) <strong><?php echo $row['mood']; ?></strong> mood at a tempo of <strong><?php echo $row['tempo']; ?></strong>. This piece will be performed for <strong><?php echo secs2mins($row['length']); ?></strong> minutes.</p>
-				<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="profane" /> Reject (profane)</label>
-				<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="nonsense" /> Reject (nonsense)</label>
-				<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="queued" /> Approve</label>
-				<p class="bottom"></p>
-<?php
-		}
-?>
-				<input type="submit" value="Moderate Pending" />
-			</form>
-		</div>
 		<div id="playing">			
 			<h2>Currently Playing</h3>
 <?php
@@ -218,29 +200,20 @@
 				<input type="hidden" name="action" value="moderate" />
 <?php
 		// Load queued scores
-		$query = "SELECT * FROM icmlm_scores WHERE status = 'queued' ORDER BY queue_time ASC";
+		$query = "SELECT * FROM icmlm_scores WHERE status = 'queued' ORDER BY queue_time ASC LIMIT 5";
 		$results = mysql_query($query);
 		while( $row = mysql_fetch_array($results) ) {
 ?>
 				<div id="queued<?php echo $row['id'];?>">
 					<h3><strong><?php echo $row['title']; ?></strong></h2>
 					<h4><strong>By <?php echo $row['author']; ?></strong></h3>
-					<p class="review">Perform a piece for <strong><?php echo $row['instruments']; ?></strong>. Play within a tonality of <strong><?php echo $row['tonality']; ?></strong>, and within dynamics that (are) <strong><?php echo $row['dynamics']; ?></strong>. Play the composition so that is sets a(n) <strong><?php echo $row['mood']; ?></strong> mood at a tempo of <strong><?php echo $row['tempo']; ?></strong>. This piece will be performed for <strong><?php echo secs2mins($row['length']); ?></strong> minutes.</p>
+					<p class="review">For <strong><?php echo $row['instruments']; ?></strong>
 					<button onclick="startScore(<?php echo $row['id']; ?>);return false;">START!</button>
-					<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="profane" /> Reject (profane)</label>
-					<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="nonsense" /> Reject (nonsense)</label>
-					<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="pending" /> Unapprove</label>
-					<p class="bottom"></p>
 				</div>
 <?php
 		}
 ?>
-				<input type="submit" value="Modify Queued" />
-			</form>
 		</div>
-<?php
-	}
-?>
 	</main>
 </body>
 </html>
