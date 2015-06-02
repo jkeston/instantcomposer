@@ -78,7 +78,7 @@ legend {
 }
 .review-heading,
 .review-items {
-	color: #d31217;
+	color: #00a9ce;
 	font-weight: bold;
 	text-decoration: underline;
 }
@@ -103,7 +103,7 @@ button.nav-btn.navPrev,
 button.nav-btn.navNext,
 button.nav-btn.navReview,
 button.nav-btn.navSubmit {
-	background-color: #bc2024;
+	background-color: #00a9ce;
 }
 button.nav-btn.navStart > a.ui-link,
 button.navPrev > a.ui-link,
@@ -119,7 +119,8 @@ button.navNext:active > a.ui-link,
 button.navNext:hover > a.ui-link,
 button.navPrev:active > a.ui-link,
 button.navPrev:hover > a.ui-link, {
-	color: #fff;
+    background-color: #333;
+	color: #00a9ce;
 }
 
 button.nav-btn.navReview {
