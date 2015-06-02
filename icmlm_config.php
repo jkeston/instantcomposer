@@ -1,7 +1,17 @@
 <?php
     // connect to database
-    $dbh = mysql_connect("localhost", "your_db_user", "your_db_password") or die("Connection failed");
-    mysql_select_db("your_database");
+    $dbh = mysql_connect("localhost", "username", "password") or die("Connection failed");
+    mysql_select_db("unearthe_icmlm");
     // Set timezine
     date_default_timezone_set('America/Chicago');
+
+    function secs2Mins($e) {
+		$m = floor($e / 60);
+		$s = $e - ($m * 60);
+		if ( $s < 10 ) {
+			$s = '0' . $s;
+		}
+		$l = $m . ':' . $s;
+		return $l;
+	}
 ?>
