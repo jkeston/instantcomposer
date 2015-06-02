@@ -17,24 +17,30 @@
 	function loadQueued() {
 		$.ajax({
 			url: 'start_score.php',
-         data: { 
-				action: 'load'
+			data: { 
+				action: 'load',
+				sid: 0
 			},
-         type: 'post',                   
-         async: 'false',
+			type: 'post',                   
+			async: 'false',
 			dataType: 'json',
-            success: function(result) {
-            	// alert('result|'+result.status);
-            	alert(result);
-            },
-        });
-        return false;	
-	}
-
-
-
-
-
+			success: function(result) {
+				// alert('result|'+result.status);
+				var list = '';
+				for (var i=0; i < result.length; ++i ) {
+					list += '<div id="queued'+result[i].id+'">\n';
+					list += '<h3><strong>'+result[i].title+'</strong></h2>\n';
+					list += '<h4><strong>By '+result[i].author+'</strong></h3>\n';
+					list += '<p class="review">For <strong>'+result[i].instruments+'</strong>\n';
+					list += '<button onclick="startScore('+result[i].id+');return false;">START!</button>\n';
+					list += '</div>\n';
+				}
+				console.log(list);
+				$('#qlist').append(list);
+				//alert(list);
+			},
+		});
+		return false;	
 	}
 	function startScore(sid) {
 		$.ajax({
@@ -121,7 +127,7 @@
 				playing = false;
 			}
 		}
-	}, 1000);
+	}, 100);
 	</script>
 	<style>
 	* {
@@ -189,30 +195,14 @@
 			<h3><strong id="review_title">___________</strong></h2>
 			<h4><strong id="review_author">By ___________</strong></h3>
 			<p class="review">Perform a piece for <strong id="review_instruments">___________</strong>. Play within a tonality of <strong id="review_tonality">___________</strong>, and within dynamics that (are) <strong id="review_dynamics">___________</strong>. Play the composition so that is sets a(n) <strong id="review_mood">___________</strong> mood at a tempo of <strong id="review_tempo">___________</strong>. This piece will be performed for <strong id="review_length">___________</strong> minutes.</p>
-			<p id="nothing">Nothing currently playing. Start another piece below.</p>
 <?php
 		}
 ?>
 		</div>
 		<div id="queued">
 			<h2>Queued Scores</h3>
-			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-				<input type="hidden" name="action" value="moderate" />
-<?php
-		// Load queued scores
-		$query = "SELECT * FROM icmlm_scores WHERE status = 'queued' ORDER BY queue_time ASC LIMIT 5";
-		$results = mysql_query($query);
-		while( $row = mysql_fetch_array($results) ) {
-?>
-				<div id="queued<?php echo $row['id'];?>">
-					<h3><strong><?php echo $row['title']; ?></strong></h2>
-					<h4><strong>By <?php echo $row['author']; ?></strong></h3>
-					<p class="review">For <strong><?php echo $row['instruments']; ?></strong>
-					<button onclick="startScore(<?php echo $row['id']; ?>);return false;">START!</button>
-				</div>
-<?php
-		}
-?>
+			<div id="qlist">
+			</div>
 		</div>
 	</main>
 </body>

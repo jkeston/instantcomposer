@@ -1,8 +1,8 @@
 <?php
 	switch($_POST['action']) {
 		case 'authenticate':
-			if ($_POST['icmlm_pw'] == 'password') {
-				setcookie('icmlm_auth','password');
+			if ($_POST['icmlm_pw'] == 'madlibbed229') {
+				setcookie('icmlm_auth','madlibbed229');
 				header('Location: moderate.php');
 				exit;
 			}

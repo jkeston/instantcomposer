@@ -4,20 +4,21 @@
 
 	// $inst = implode(',',$_POST['instruments']);
 	if ($_POST['action'] == 'load' ) {
-		error_log('load');
-		$query = "SELECT * icmlm_scores WHERE status='queued' ORDER BY queue_time ASC LIMIT 5";
+		
+		$query = "SELECT * FROM icmlm_scores WHERE status='queued' ORDER BY queue_time ASC LIMIT 5";
+		error_log('load '.$query);
 		$results = mysql_query($query);
 		while( $row = mysql_fetch_array($results) ) {
 			$output[] = array(
-							'id'				=> $row['id'],
-							'title' 	 		=> $row['title'],
+							'id'			=> $row['id'],
+							'title' 	 	=> $row['title'],
 							'author' 	 	=> $row['author'],
 							'instruments'	=> $row['instruments'],
 							'tonality'		=> $row['tonality'],
 							'dynamics'		=> $row['dynamics'],
 							'mood'			=> $row['mood'],
 							'tempo'			=> $row['tempo'],
-							'len'				=> $row['length']		
+							'len'			=> $row['length']		
 							);
 		}
 		echo json_encode($output);
@@ -44,7 +45,7 @@
 								'dynamics'		=> $row['dynamics'],
 								'mood'			=> $row['mood'],
 								'tempo'			=> $row['tempo'],
-								'len'		=> $row['length']
+								'len'			=> $row['length']
 								);
 	    		echo json_encode($output);
 			}

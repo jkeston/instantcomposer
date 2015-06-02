@@ -87,7 +87,6 @@
 		var l = m + ':' + s;
 		return l;
 	}
-<<<<<<< HEAD
 	// setInterval(function(){ 
 	// 	if ( playing ) {
 	// 		var time = $('#review_length').html();
@@ -101,21 +100,6 @@
 	// 		}
 	// 	}
 	// }, 100);
-=======
-	setInterval(function(){ 
-		if ( playing ) {
-			var time = $('#review_length').html();
-			var p = time.split(':');
-			var secs = ( Number(p[0]) * 60 ) + Number(p[1]);
-			secs -= 1;
-			$('#review_length').html(secs2Mins(secs));
-			if (secs < 1) {
-				stopScore($('#playing_id').val());
-				playing = false;
-			}
-		}
-	}, 100);
->>>>>>> aab07bad005155dc15475101604741aae909d4f0
 	</script>
 	<style>
 	* {
@@ -246,11 +230,7 @@
 			<h3><strong id="review_title">___________</strong></h2>
 			<h4><strong id="review_author">By ___________</strong></h3>
 			<p class="review">Perform a piece for <strong id="review_instruments">___________</strong>. Play within a tonality of <strong id="review_tonality">___________</strong>, and within dynamics that (are) <strong id="review_dynamics">___________</strong>. Play the composition so that is sets a(n) <strong id="review_mood">___________</strong> mood at a tempo of <strong id="review_tempo">___________</strong>. This piece will be performed for <strong id="review_length">___________</strong> minutes.</p>
-<<<<<<< HEAD
 			<p id="nothing">Nothing currently playing.</p>
-=======
-			<p id="nothing">Nothing currently playing. Start another piece below.</p>
->>>>>>> aab07bad005155dc15475101604741aae909d4f0
 <?php
 		}
 ?>
@@ -269,10 +249,6 @@
 					<h3><strong><?php echo $row['title']; ?></strong></h2>
 					<h4><strong>By <?php echo $row['author']; ?></strong></h3>
 					<p class="review">Perform a piece for <strong><?php echo $row['instruments']; ?></strong>. Play within a tonality of <strong><?php echo $row['tonality']; ?></strong>, and within dynamics that (are) <strong><?php echo $row['dynamics']; ?></strong>. Play the composition so that is sets a(n) <strong><?php echo $row['mood']; ?></strong> mood at a tempo of <strong><?php echo $row['tempo']; ?></strong>. This piece will be performed for <strong><?php echo secs2mins($row['length']); ?></strong> minutes.</p>
-<<<<<<< HEAD
-=======
-					<button onclick="startScore(<?php echo $row['id']; ?>);return false;">START!</button>
->>>>>>> aab07bad005155dc15475101604741aae909d4f0
 					<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="profane" /> Reject (profane)</label>
 					<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="nonsense" /> Reject (nonsense)</label>
 					<label><input type="radio" name="approval[<?php echo $row['id']; ?>]" value="pending" /> Unapprove</label>
