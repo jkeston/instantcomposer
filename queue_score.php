@@ -1,13 +1,13 @@
 <?php
 	include('icmlm_config.php');
 
-    // $action = $_POST['action']; 
-    // Decode JSON object into readable PHP object
-    // $f = json_decode($_POST['formData']);
+	// $action = $_POST['action']; 
+	// Decode JSON object into readable PHP object
+	// $f = json_decode($_POST['formData']);
 
-    parse_str($_POST['formData'], $f);
-    // error_log("a|".print_r($f,true)."|");
-    // error_log("b|".print_r($_POST,true)."|");
+	parse_str($_POST['formData'], $f);
+	// error_log("a|".print_r($f,true)."|");
+	// error_log("b|".print_r($_POST,true)."|");
 	// error_log("c|".$_POST['formData']."|");
 
 	// $inst = implode(',',$_POST['instruments']);
@@ -19,6 +19,9 @@
     	echo json_encode($output);
 	}
 	else {
+		if (empty($f['author'])) {
+			$f['author'] = 'Anonymous';
+		}
 		$query = "INSERT INTO icmlm_scores (
 			title,		
 			author,

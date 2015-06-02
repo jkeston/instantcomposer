@@ -10,9 +10,12 @@
 		case 'moderate':
 			foreach ( $_POST['approval'] as $key => $value ) {
 				$query = "UPDATE icmlm_scores SET status = '$value' WHERE id = $key";
-				error_log($query);
+				// error_log($query);
 				mysql_query($query);
 			}
+			break;
+		case 'set_status':
+			header('Location: moderate.php?score_status='.$_POST['new_status']);
 			break;
 		default:
 			break;
