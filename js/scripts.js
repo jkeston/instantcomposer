@@ -1,8 +1,31 @@
 $(document).ready(function(){
 	$("input").attr("maxlength", 48);
 	$("#notify").click(function(){
-		$("#notify_email").slideToggle(300, "easeInOutSine");
+		$("#notify_email").slideToggle(500, "easeInOutSine");
 	});
+	$.ajax({
+		url: 'get_instruments.php',                   
+		async: 'false',
+		dataType: 'json',
+		success: function(result) {
+			// alert('result|'+result.status);
+			if ( result.status ) {
+				$('#instruments').append( result.options );
+				$("#instruments").selectmenu('refresh', true);
+				$.mobile.navigate("#intro");
+				//console.log('?'+result.options);
+			}
+			else {
+				$('#instruments').append( '<option>No instruments Available</option>\n' );
+				$("#instruments").selectmenu('refresh', true);
+				$.mobile.navigate("#intro");
+			}
+		},
+		error: function (request,error) {
+			// This callback function will trigger on unsuccessful action                
+			alert('Network error has occurred please try again!');
+		}
+ 	});		
 });
 function pop(e,f) {
 	$(e).val(f);
@@ -28,7 +51,7 @@ function renderReview() {
 		$("#review_author").html('By '+$("#author").val()).addClass('review-heading');
 	}
 	else {
-		$("#review_author").html('By anonymous').addClass('review-heading');
+		$("#review_author").html('By Anonymous').addClass('review-heading');
 	}
 	if ($("#tonality").val().length > 0) {
 		$("#review_tonality").html($("#tonality").val()).addClass('review-items');
@@ -106,45 +129,45 @@ function validate_score() {
 	if ( valid ) {
 		$.ajax({
 			url: 'queue_score.php',
-            data: { 
-            	action: 'queue', 
-            	formData: $('#queuescore').serialize()
-            },
-            type: 'post',                   
-            async: 'false',
+         data: { 
+         	action: 'queue', 
+         	formData: $('#queuescore').serialize()
+         },
+         type: 'post',                   
+         async: 'false',
 			dataType: 'json',
-            // beforeSend: function() {
-            // 	// alert('beforeSend');
-            //     // This callback function will trigger before data is sent
-            //     $.mobile.loading('show'); // This will show ajax spinner
-            // },
-            // complete: function() {
-            // 	// alert('complete');
-            //     // This callback function will trigger on data sent/received complete
-            //     $.mobile.loading('show'); // This will hide ajax spinner
-            // },
-            success: function (result) {
-            	// alert('result|'+result.status);
-                if( result.status ) {
-                	$('#total_queued').html( result.queued_pending );
-                    $.mobile.navigate("#thanks"); 
-                    valid = true;                       
-                }
-                else {
-                	valid = false;
-                	// console.log("duplicate|"+valid);
+         // beforeSend: function() {
+         // 	// alert('beforeSend');
+         //     // This callback function will trigger before data is sent
+         //     $.mobile.loading('show'); // This will show ajax spinner
+         // },
+         // complete: function() {
+         // 	// alert('complete');
+         //     // This callback function will trigger on data sent/received complete
+         //     $.mobile.loading('show'); // This will hide ajax spinner
+         // },
+         success: function (result) {
+				// alert('result|'+result.status);
+				if( result.status ) {
+					$('#total_queued').html( result.queued_pending );
+					$.mobile.navigate("#thanks"); 
+					valid = true;                       
+				}
+				else {
+					valid = false;
+					// console.log("duplicate|"+valid);
 					message += "A score with that title has already been submitted. Please change the title.<br />\n";
 					$("#validate p").html( message );
 					$( "#validate" ).popup('open',{
 						transition: 'slidedown'
 					});
-                }
-            },
-            // error: function (request,error) {
-            //     // This callback function will trigger on unsuccessful action                
-            //     alert('Network error has occurred please try again!');
-            // }
-        });		
+				}
+         },
+         error: function (request,error) {
+				// This callback function will trigger on unsuccessful action                
+				alert('Network error has occurred please try again!');
+         }
+      });		
 	}
 	if ( !valid ) {
 		// console.log('valid|'+valid+"|message|"+message);
