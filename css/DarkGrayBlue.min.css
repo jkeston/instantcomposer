@@ -273,7 +273,7 @@ html body .ui-group-theme-b a{
 .ui-page-theme-b a:visited,
 html .ui-bar-b a:visited,
 html .ui-body-b a:visited,
-html body .ui-group-theme-b a:visited{   color:#3388cc ;}
+html body .ui-group-theme-b a:visited{color:#3388cc ;}
 
 .ui-page-theme-b a:hover,
 html .ui-bar-b a:hover,
@@ -283,7 +283,7 @@ html body .ui-group-theme-b a:hover{color:#005599 ;}
 .ui-page-theme-b a:active,
 html .ui-bar-b a:active,
 html .ui-body-b a:active,
-html body .ui-group-theme-b a:active{color:#005599 ;}
+html body .ui-group-theme-b a:active{color:#00a9ce ;}
 
 .ui-page-theme-b .ui-btn,
 html .ui-bar-b .ui-btn,
@@ -305,9 +305,9 @@ html .ui-bar-b .ui-btn:hover,
 html .ui-body-b .ui-btn:hover,
 html body .ui-group-theme-b .ui-btn:hover,
 html head + body .ui-btn.ui-btn-b:hover{
-     background-color:#222 ;
+     background-color:#00a9ce ;
      border-color:#dddddd ;
-     color:#00a9ce ;
+     color:#222 ;
      text-shadow:0  0  0  #222 ;
 }
 
@@ -319,7 +319,7 @@ html head + body .ui-btn.ui-btn-b:active{
      background-color:#00a9ce ;
      border-color:#dddddd ;
      color:#333 ;
-     text-shadow:0  0  0  #00a9ce ;
+     text-shadow:0  0  0  #333 ;
 }
 
 .ui-page-theme-b .ui-btn.ui-btn-active,
@@ -343,8 +343,8 @@ html .ui-body-b .ui-slider-track .ui-btn-active,
 html body .ui-group-theme-b .ui-slider-track .ui-btn-active,
 html body div.ui-slider-track.ui-body-b .ui-btn-active{
      background-color:#00a9ce ;
-     border-color:#3388cc ;
-     color:#ffffff ;
+     border-color:#00a9ce ;
+     color:#555 ;
      text-shadow:0  0  0  #00a9ce ;
 }
 
@@ -364,7 +364,10 @@ html .ui-bar-b .ui-focus,
 html .ui-body-b .ui-focus,
 html body .ui-group-theme-b .ui-focus,
 html head + body .ui-btn-b.ui-focus,
-html head + body .ui-body-b.ui-focus{-webkit-box-shadow:0 0 12px #00a9ce ;-moz-box-shadow:0 0 12px #00a9ce ;box-shadow:0 0 12px #00a9ce ;}
+html head + body .ui-body-b.ui-focus{
+     -webkit-box-shadow:0 0 12px #222 ;
+     -moz-box-shadow:0 0 12px #222 ;
+     box-shadow:0 0 12px #222 ;}
 
 .ui-disabled,.ui-state-disabled,button[disabled],
 .ui-select .ui-btn.ui-state-disabled{filter:Alpha(Opacity=30);opacity:.3;cursor:default !important;pointer-events:none;}

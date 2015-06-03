@@ -13,21 +13,19 @@
 	<script src="js/scripts.js"></script>
 </head>
 <body>
-	<div data-role="main">
+	<div data-role="main" data-theme="b">
 		<form method="post" class="ui-filterable" onsubmit="return validate_score()" data-ajax="false" id="queuescore">
 			<div data-role="page-theme-b" id="intro"><!--Begin Intro-->
-				<div data-role="header" data-position="fixed" data-id="header1" data-theme="a">
-					<p class="topHead">Instant Composer</p>
-					<p class="subHead">Mad-libbed Music</p>
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="b" id="ichead">
 				</div>
 				<div data-role="content">
 					<div data-role="popup" id="oliveros" class="ui-content icmlm_popup">
-						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
 						<p><strong>Pauline Oliveros</strong> is an American composer and accordionist who is a central figure in the development of experimental and post-war electronic art music. She was a founding member of the San Francisco Tape Music Center in the 1960s, and served as its director. She has taught music at Mills College, the University of California, San Diego, Oberlin Conservatory of Music, and Rensselaer Polytechnic Institute. Oliveros has written books, formulated new music theories and investigated new ways to focus attention on music including her concepts of "Deep Listening" and "sonic awareness". &mdash; Wikipedia</p>
 					</div>
 					<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
 					<p>Through a process that can take less than a minute you will write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
-					<button class="nav-btn navStart"><a href="#step1" data-transition="slide">Start Composing</a></button>
+					<button class="nav-btn navStart"><a href="#step1" data-transition="slide" data-theme="b" >Start Composing</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
 					<a href="#intro" data-transition="slide" class="ui-btn-active">Home</a>

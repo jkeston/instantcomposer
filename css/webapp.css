@@ -118,7 +118,7 @@ button.navPrev > a.ui-link,
 button.navNext > a.ui-link,
 button.nav-btn.navReview > a.ui-link,
 button.nav-btn.navSubmit {
-	color: #fff;
+	color: #333;
 	text-shadow: none;
 }
 button.nav-btn.navStart:active > a.ui-link,
