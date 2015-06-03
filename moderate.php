@@ -154,6 +154,7 @@
 ?>
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 		<input type="hidden" name="action" value="authenticate" />
+		<input type="hidden" name="path" value="moderate.php" />
 		<p>Please enter the password to moderate the scores:</p>
 		<input type="password" name="icmlm_pw" />
 		<input type="submit" value="Login" />
