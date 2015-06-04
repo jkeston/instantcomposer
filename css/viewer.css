@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	background-color: #000;
+	color: rgba(255,255,255,0.5);
+}
+* {
+	box-sizing: border-box;
+}
+body, html {
+	padding: 0;
+	margin: 0;
+}
+main {
+	padding: 2em;
+}
+header {
+	background-image: url(../images/instantComposer2.svg);
+	background-position: 70% 0;
+	background-size: cover;
+	width: 50%;
+	height: 9vw;
+	opacity: 0.75;
+}
+h1,h2,h3,h4 {
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+	color: rgba(255,255,255,0.75);
+}
+h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 1.5em;
+	text-align: left;
+}
+button {
+	padding: 0.5em;
+}
+#visuals {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+#queued {
+	text-align: right;
+}
+#queued h2 {
+	padding-bottom: 0.5em;
+}
+#queued p {
+	margin-top: 0;
+}
+.bottom {
+	border-bottom: 1px solid #ccc;
+}
+#moderation {
+	padding: 1em;
+	width: 50%;
+	float: left;
+}
+#queued {
+	position: relative;
+	z-index: 2;
+	font-size: 1.25vw;
+	padding: 0;
+	width: 20%;
+	float: right;
+}
+#playing {
+	position: absolute;
+	padding: 0 2em 0 0;
+	width: 80%;
+	z-index: 2;
+	font-size: 3.5vw;
+}
+#nothing {
+	color: #e42328;
+}
