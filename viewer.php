@@ -1,3 +1,9 @@
+<?
+	include('icmlm_config.php');
+	if ( count($_POST) > 0 ) {
+		include('mod_actions.php');
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +17,20 @@
 	<script src="js/p5.icmlm.js"></script>
 </head>
 <body>
+<?php
+	if ($_COOKIE['icmlm_auth'] != 'madlibbed229') {
+?>
+	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+		<input type="hidden" name="action" value="authenticate" />
+		<input type="hidden" name="path" value="viewer.php" />
+		<p>Please enter the password to start the viewer:</p>
+		<input type="password" name="icmlm_pw" />
+		<input type="submit" value="Login" />
+	</form>
+<?php
+	}
+	else {
+?>	
 	<div id="visuals"></div>
 	<main>
 		<div id="playing">
@@ -28,5 +48,8 @@
 			</div>
 		</div>
 	</main>
+<?php
+	}
+?>
 </body>
 </html>

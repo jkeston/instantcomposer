@@ -13,6 +13,7 @@ function setup() {
 }
 
 function draw() {
+  // noCursor();
   fill(0,15,30,10);
   noStroke();
   rect(0,0,w,h);
@@ -28,7 +29,11 @@ function draw() {
 
   var waveform = fft.waveform();
   noFill();
+  // push();
+  // translate(w*0.5,h*0.5);
   beginShape();
+  // var rad = radians(frameCount+25);
+  // rotate(rad);
   stroke(100,0,70,120); // waveform color
   strokeWeight(3);
   for (var i = 0; i < waveform.length; i++){
@@ -38,4 +43,5 @@ function draw() {
     // vertex( x,waveform[i]+((h*0.5)-128) );
   }
   endShape();
+  // pop();
 }

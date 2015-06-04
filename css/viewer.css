@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic,400italic);
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -78,6 +78,9 @@ button {
 	z-index: 2;
 	font-size: 3.5vw;
 }
-#nothing {
-	color: #e42328;
+#playing p {
+	font-weight: 100;
+}
+#playing strong {
+	font-weight: 300;
 }
