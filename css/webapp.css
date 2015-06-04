@@ -130,7 +130,7 @@ button.navNext:active > a.ui-link,
 button.navNext:hover > a.ui-link,
 button.navPrev:active > a.ui-link,
 button.navPrev:hover > a.ui-link, {
-    background-color: #333;
+    background-color: #555;
 	color: #00a9ce;
 }
 
