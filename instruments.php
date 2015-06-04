@@ -10,6 +10,7 @@
 	<title>Instant Composer: Mad-libbed Music</title>
 	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/webapp.css" />
+	<link rel="stylesheet" href="css/mod_inst.css" />
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script>
@@ -101,45 +102,6 @@
 	// 	}
 	// }, 100);
 	</script>
-	<style>
-	* {
-		box-sizing: border-box;
-	}
-	main, body, html {
-		padding: 0;
-		margin: 0;
-	}
-	header {
-		padding: 0.25em;
-		background-color: #e9e9e9;
-		text-align: center;
-	}
-	button {
-		padding: 0.5em !important;
-	}
-	.bottom {
-		border-bottom: 1px solid #ccc;
-	}
-	#instruments {
-		padding: 1em;
-		width: 50%;
-		float: left;
-	}
-	#queued {
-		padding: 1em;
-		width: 50%;
-		float: right;
-	}
-	#playing {
-		background-color: #cfc;
-		padding: 1em;
-		width: 50%;
-		float: right;
-	}
-	#nothing {
-		color: #e42328;
-	}
-	</style>
 </head>
 <body>
 	<main>
