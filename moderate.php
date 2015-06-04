@@ -112,8 +112,6 @@
 	header {
 		padding: 0.25em;
 		background-color: #e9e9e9;
-	}
-	h1 {
 		text-align: center;
 	}
 	button {
@@ -147,6 +145,7 @@
 	<main>
 		<header>
 			<h1>Instant Composer Moderation</h1>
+			<p>Moderate Scores | <a href="instruments.php">Manage Instruments</a></p>
 		</header>
 
 <?php

@@ -1,8 +1,79 @@
 $(document).ready(function(){
+	var page_ids = ['intro','step1','step2','step3','step4','step5','review'];
+	$(function(){
+		// Bind the swipeleftHandler callback function to the swipe event on div.box
+		$( "body" ).on( "swipeleft", swipeleftHandler );
+
+		// Callback function references the event target and adds the 'swipeleft' class to it
+		function swipeleftHandler( event ) {
+			var page = $(':mobile-pagecontainer').pagecontainer('getActivePage')[0].id;
+			for (var i=0; i < page_ids.length; ++i ) {
+				if ( page == page_ids[i] ) {
+					if ( i+1 < 7 ) {
+        				$( ":mobile-pagecontainer" ).pagecontainer( "change", '#'+page_ids[i+1], {
+            			transition: "slide"
+        				});
+						break;
+					}
+				} 
+			}
+			// alert('you swiped left from '+page);
+			// $.mobile.navigate("#intro");
+		}
+	});
+	$(function(){
+		// Bind the swipeleftHandler callback function to the swipe event on div.box
+		$( "body" ).on( "swiperight", swiperightHandler );
+
+		// Callback function references the event target and adds the 'swipeleft' class to it
+		function swiperightHandler( event ){
+			var page = $(':mobile-pagecontainer').pagecontainer('getActivePage')[0].id;
+			for (var i=0; i < page_ids.length; ++i ) {
+				if ( page == page_ids[i] ) {
+					if ( i-1 > -1 ) {
+        				$( ":mobile-pagecontainer" ).pagecontainer( "change", '#'+page_ids[i-1], {
+            			transition: "slide",
+            			reverse: true
+        				});
+						// $.mobile.navigate('#'+page_ids[i-1],{
+						// 	transition: "slide",
+						//		reverse: true
+						// });
+						break;
+					}
+				} 
+			}
+			// alert('you swiped right from '+page);
+			// $.mobile.navigate("#intro");
+		}
+	});
 	$("input").attr("maxlength", 48);
 	$("#notify").click(function(){
-		$("#notify_email").slideToggle(300, "easeInOutSine");
+		$("#notify_email").slideToggle(500, "easeInOutSine");
 	});
+	$.ajax({
+		url: 'get_instruments.php',                   
+		async: 'false',
+		dataType: 'json',
+		success: function(result) {
+			// alert('result|'+result.status);
+			if ( result.status ) {
+				$('#instruments').append( result.options );
+				$("#instruments").selectmenu('refresh', true);
+				$.mobile.navigate("#intro");
+				//console.log('?'+result.options);
+			}
+			else {
+				$('#instruments').append( '<option>No instruments Available</option>\n' );
+				$("#instruments").selectmenu('refresh', true);
+				$.mobile.navigate("#intro");
+			}
+		},
+		error: function (request,error) {
+			// This callback function will trigger on unsuccessful action                
+			alert('Network error has occurred please try again!');
+		}
+ 	});		
 });
 function pop(e,f) {
 	$(e).val(f);
@@ -28,7 +99,7 @@ function renderReview() {
 		$("#review_author").html('By '+$("#author").val()).addClass('review-heading');
 	}
 	else {
-		$("#review_author").html('By anonymous').addClass('review-heading');
+		$("#review_author").html('By Anonymous').addClass('review-heading');
 	}
 	if ($("#tonality").val().length > 0) {
 		$("#review_tonality").html($("#tonality").val()).addClass('review-items');
@@ -106,45 +177,45 @@ function validate_score() {
 	if ( valid ) {
 		$.ajax({
 			url: 'queue_score.php',
-            data: { 
-            	action: 'queue', 
-            	formData: $('#queuescore').serialize()
-            },
-            type: 'post',                   
-            async: 'false',
+         data: { 
+         	action: 'queue', 
+         	formData: $('#queuescore').serialize()
+         },
+         type: 'post',                   
+         async: 'false',
 			dataType: 'json',
-            // beforeSend: function() {
-            // 	// alert('beforeSend');
-            //     // This callback function will trigger before data is sent
-            //     $.mobile.loading('show'); // This will show ajax spinner
-            // },
-            // complete: function() {
-            // 	// alert('complete');
-            //     // This callback function will trigger on data sent/received complete
-            //     $.mobile.loading('show'); // This will hide ajax spinner
-            // },
-            success: function (result) {
-            	// alert('result|'+result.status);
-                if( result.status ) {
-                	$('#total_queued').html( result.queued_pending );
-                    $.mobile.navigate("#thanks"); 
-                    valid = true;                       
-                }
-                else {
-                	valid = false;
-                	// console.log("duplicate|"+valid);
+         // beforeSend: function() {
+         // 	// alert('beforeSend');
+         //     // This callback function will trigger before data is sent
+         //     $.mobile.loading('show'); // This will show ajax spinner
+         // },
+         // complete: function() {
+         // 	// alert('complete');
+         //     // This callback function will trigger on data sent/received complete
+         //     $.mobile.loading('show'); // This will hide ajax spinner
+         // },
+         success: function (result) {
+				// alert('result|'+result.status);
+				if( result.status ) {
+					$('#total_queued').html( result.queued_pending );
+					$.mobile.navigate("#thanks"); 
+					valid = true;                       
+				}
+				else {
+					valid = false;
+					// console.log("duplicate|"+valid);
 					message += "A score with that title has already been submitted. Please change the title.<br />\n";
 					$("#validate p").html( message );
 					$( "#validate" ).popup('open',{
 						transition: 'slidedown'
 					});
-                }
-            },
-            // error: function (request,error) {
-            //     // This callback function will trigger on unsuccessful action                
-            //     alert('Network error has occurred please try again!');
-            // }
-        });		
+				}
+         },
+         error: function (request,error) {
+				// This callback function will trigger on unsuccessful action                
+				alert('Network error has occurred please try again!');
+         }
+      });		
 	}
 	if ( !valid ) {
 		// console.log('valid|'+valid+"|message|"+message);

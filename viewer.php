@@ -10,10 +10,39 @@
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script>
-	var playing = false;
-	window.onload = function() {
+	var playing;
+	$(document).ready(function() {
+		playing = false;
 		loadQueued();
-	}
+		$(document).keyup(function(e) {
+			console.log(e.which);
+			// 1 = 49, 2 = 50, 3 = 51, 4 = 52, 5 = 53, space = 32
+			if(e.which == 49) {
+				var n = $('#sequence0').val();
+				startScore(n);
+			}
+			if(e.which == 50) {
+				var n = $('#sequence1').val();
+				startScore(n);
+			}
+			if(e.which == 51) {
+				var n = $('#sequence2').val();
+				startScore(n);
+			}
+			if(e.which == 52) {
+				var n = $('#sequence3').val();
+				console.log('dfghdfghdfgh '+n);
+				startScore(n);
+			}
+			if(e.which == 53) {
+				var n = $('#sequence4').val();
+				startScore(n);
+			}
+			if(e.which == 32) {
+				playing = true;
+			}
+		});
+	});
 	function loadQueued() {
 		$.ajax({
 			url: 'start_score.php',
@@ -32,11 +61,12 @@
 					list += '<h3><strong>'+result[i].title+'</strong></h2>\n';
 					list += '<h4><strong>By '+result[i].author+'</strong></h3>\n';
 					list += '<p class="review">For <strong>'+result[i].instruments+'</strong>\n';
-					list += '<button onclick="startScore('+result[i].id+');return false;">START!</button>\n';
+					// list += '<button onclick="startScore('+result[i].id+');return false;">START!</button>\n';
+					list += '<input type="hidden" value="'+result[i].id+'" id="sequence'+i+'" />';
 					list += '</div>\n';
 				}
 				console.log(list);
-				$('#qlist').append(list);
+				$('#qlist').html(list);
 				//alert(list);
 			},
 		});
@@ -55,20 +85,21 @@
             success: function(result) {
             	// alert('result|'+result.status);
                 if ( result.status == true ) {
-                	playing = true;
+                	// playing = true;
                 	$('#playing_id').val(result.id);
-					$('#review_title').html(result.title);
-					$('#review_author').html('By '+result.author);
-					$('#review_instruments').html(result.instruments);
-					$('#review_tonality').html(result.tonality);
-					$('#review_tempo').html(result.tempo);
-					$('#review_length').html(secs2Mins(result.len));
-					$('#review_mood').html(result.mood);
-					$('#review_dynamics').html(result.dynamics);
-					$('#nothing').html('');
-					$('#queued'+result.id).slideToggle(500, function() {
-						$('#queued'+result.id).remove(); 
-					});
+						$('#review_title').html(result.title);
+						$('#review_author').html('By '+result.author);
+						$('#review_instruments').html(result.instruments);
+						$('#review_tonality').html(result.tonality);
+						$('#review_tempo').html(result.tempo);
+						$('#review_length').html(secs2Mins(result.len));
+						$('#review_mood').html(result.mood);
+						$('#review_dynamics').html(result.dynamics);
+						$('#nothing').html('');
+						$('#queued'+result.id).slideToggle(500, function() {
+							$('#queued'+result.id).remove();
+							loadQueued();
+						});
                 }
                 if (result.status == false ) {
                 	$('#nothing').html('This score is still playing. Please wait until it is finished.');
@@ -200,7 +231,7 @@
 ?>
 		</div>
 		<div id="queued">
-			<h2>Queued Scores</h3>
+			<h2>Coming Up</h3>
 			<div id="qlist">
 			</div>
 		</div>

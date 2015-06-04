@@ -27,7 +27,7 @@
 				else {
 					$query = "UPDATE icmlm_instruments SET status = '$v' WHERE id=$k";
 				}
-				error_log($query);
+				// error_log($query);
 				$result = mysql_query($query);
 			}
 			if (!empty($_POST['new_instrument'])) {
@@ -42,8 +42,8 @@
 				$query = "INSERT INTO icmlm_instruments (name) VALUES ('".$new_inst."')";
 				// error_log($query);
 				mysql_query($query);
-
 			}
+			break;
 		default:
 			break;
 	}
