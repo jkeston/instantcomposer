@@ -1,52 +1,55 @@
 $(document).ready(function(){
 	var page_ids = ['intro','step1','step2','step3','step4','step5','review'];
-	$(function(){
-		// Bind the swipeleftHandler callback function to the swipe event on div.box
-		$( "body" ).on( "swipeleft", swipeleftHandler );
-
-		// Callback function references the event target and adds the 'swipeleft' class to it
-		function swipeleftHandler( event ) {
-			var page = $(':mobile-pagecontainer').pagecontainer('getActivePage')[0].id;
-			for (var i=0; i < page_ids.length; ++i ) {
-				if ( page == page_ids[i] ) {
-					if ( i+1 < 7 ) {
-        				$( ":mobile-pagecontainer" ).pagecontainer( "change", '#'+page_ids[i+1], {
-            			transition: "slide"
-        				});
-						break;
-					}
-				} 
-			}
-			// alert('you swiped left from '+page);
-			// $.mobile.navigate("#intro");
+	// Bind the swipeleftHandler callback function to the swipe event on div.box
+	$( "body" ).on( "swipeleft", function(){
+		goLeft();
+	});
+	// Bind the swipeleftHandler callback function to the swipe event on div.box
+	$( "body" ).on( "swiperight", function() {
+		goRight();
+	});
+	// Bind left key to goRight and right to goLeft
+	$(document).keyup(function(e) {
+		// console.log(e.which);
+		// left = 37, right = 39
+		if (e.which == 37) {
+			goRight();
+		}
+		if (e.which == 39) {
+			goLeft();
 		}
 	});
-	$(function(){
-		// Bind the swipeleftHandler callback function to the swipe event on div.box
-		$( "body" ).on( "swiperight", swiperightHandler );
-
-		// Callback function references the event target and adds the 'swipeleft' class to it
-		function swiperightHandler( event ){
-			var page = $(':mobile-pagecontainer').pagecontainer('getActivePage')[0].id;
-			for (var i=0; i < page_ids.length; ++i ) {
-				if ( page == page_ids[i] ) {
-					if ( i-1 > -1 ) {
-        				$( ":mobile-pagecontainer" ).pagecontainer( "change", '#'+page_ids[i-1], {
-            			transition: "slide",
-            			reverse: true
-        				});
-						// $.mobile.navigate('#'+page_ids[i-1],{
-						// 	transition: "slide",
-						//		reverse: true
-						// });
-						break;
+	function goLeft() {
+		var page = $(':mobile-pagecontainer').pagecontainer('getActivePage')[0].id;
+		for (var i=0; i < page_ids.length; ++i ) {
+			if ( page == page_ids[i] ) {
+				if ( i+1 < 7 ) {
+					if ( page_ids[i+1] == 'review' ) {
+						// render the review step on swipe left
+						renderReview();
 					}
-				} 
-			}
-			// alert('you swiped right from '+page);
-			// $.mobile.navigate("#intro");
+					$( ":mobile-pagecontainer" ).pagecontainer( "change", '#'+page_ids[i+1], {
+	    			transition: "slide"
+					});
+					break;
+				}
+			} 
 		}
-	});
+	}
+	function goRight() {
+		var page = $(':mobile-pagecontainer').pagecontainer('getActivePage')[0].id;
+		for (var i=0; i < page_ids.length; ++i ) {
+			if ( page == page_ids[i] ) {
+				if ( i-1 > -1 ) {
+					$( ":mobile-pagecontainer" ).pagecontainer( "change", '#'+page_ids[i-1], {
+	    			transition: "slide",
+	    			reverse: true
+					});
+					break;
+				}
+			} 
+		}
+	}
 	$("input").attr("maxlength", 48);
 	$("#notify").click(function(){
 		$("#notify_email").slideToggle(500, "easeInOutSine");
@@ -59,13 +62,13 @@ $(document).ready(function(){
 			// alert('result|'+result.status);
 			if ( result.status ) {
 				$('#instruments').append( result.options );
-				$("#instruments").selectmenu('refresh', true);
+				// $("#instruments").selectmenu('refresh', true);
 				$.mobile.navigate("#intro");
 				//console.log('?'+result.options);
 			}
 			else {
 				$('#instruments').append( '<option>No instruments Available</option>\n' );
-				$("#instruments").selectmenu('refresh', true);
+				// $("#instruments").selectmenu('refresh', true);
 				$.mobile.navigate("#intro");
 			}
 		},

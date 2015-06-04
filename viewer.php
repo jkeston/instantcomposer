@@ -15,7 +15,7 @@
 		playing = false;
 		loadQueued();
 		$(document).keyup(function(e) {
-			console.log(e.which);
+			// console.log(e.which);
 			// 1 = 49, 2 = 50, 3 = 51, 4 = 52, 5 = 53, space = 32
 			if(e.which == 49) {
 				var n = $('#sequence0').val();
