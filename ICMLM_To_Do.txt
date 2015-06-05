@@ -1,23 +1,26 @@
 Instant Composer: Mad-libbed Music
 TO DO:
 
-1. Build MySQL Database Schema (John)
+1. DONE: Build MySQL Database Schema (John)
 2. DONE: Instructions/copy for 1st step of web app (Ariel)
 	a) What is it?
 	b) How do I do it?
 	c) "Start Composing"
 3. DONE: Define the steps for the interface (John/Adam)
 4. DONE: Instructions/copy for the rest of the steps (All)
-5. Logo updates (Renae/Valeria)
+5. DONE: Logo updates (Renae/Valeria)
 6. Layout of Web App UI (Adam/Valeria/Steve/Rene)
 7. Template (Steven/John/Adam)
 	a) Mobile Friendly
 	b) HTML/CSS
 	c) jQuery[Mobile]
 8. Vulgarity Filter
-9. Moderator Interface
-10. Score Visualizer
+9. DONE: Moderator Interface
+10. DONE: Score Visualizer
 11. DONE: Get a stage ordered (8' x 12' x 18") for delivery (Ariel)
 12. DONE: Get Abe and Mike involved
 13. Test mobile app / visualization on site
 14. Two 20" x 30" portrait posters for site with QR code / instructions / NS logo, Ai Logo, NL logo, Mill City logo (Renae)
+15. Create a placeholder page until we go live
+16. Tweak viewer.php (rotate visualization while playing?)
+17. Resolve interface bugs
