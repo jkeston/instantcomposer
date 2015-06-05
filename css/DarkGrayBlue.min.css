@@ -17,7 +17,6 @@
 html {
     font-family: 'Lato', sans-serif !important;
     font-weight: 300 !important;
-	font-size: 100%;
 }
 body,
 input,
@@ -27,8 +26,9 @@ button,
 .ui-btn {
 	font-size: 1em;
 	line-height: 1.3;
-	font-family: sans-serif /*{global-font-family}*/;
+	font-family: 'Lato', sans-serif !important /*{global-font-family}*/;
     background-color: #222;
+    color: #efefef !important;
 }
 
 /* Corner rounding
@@ -88,17 +88,25 @@ button > a {
 	height: 100%;
 	padding: 11px 0;
     background-color: #555;
+    color: #00a9ce;
 }
 
 button.navStart {
     padding: 0;
+    color: #00a9ce;
+    text-shadow: none !important ;
+ }
+ 
+button.navReview {
+    text-shadow: none !important ;
  }
 
 button.navPrev,
 button.navNext {
-	width: 49.75% !important;
+	width: 49% !important;
 	display: inline-block !important;
 	padding: 0;
+    text-shadow: none !important ;
 }
 
 button.navStart a:hover,
@@ -107,6 +115,7 @@ button.navNext a:hover,
 button.navReview a:hover {
     background-color: #00a9ce;
     color: #555555 !important ;
+    text-shadow: none !important ;
  }
 
 a {
@@ -135,12 +144,14 @@ a {
 
 #submit {
     background-color: #555;
-    color: #00a9ce;
+    color: #00a9ce !important;
+    text-shadow: none !important;
  }
  
 #submit:hover {
     background-color: #00a9ce;
-    color: #555;
+    color: #555 !important;
+    text-shadow: none !important;
  }
  
 strong { color: #00a9ce; }
