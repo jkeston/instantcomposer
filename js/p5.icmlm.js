@@ -12,6 +12,14 @@ function setup() {
   fft.setInput(mic);
 }
 
+// function mouseClicked() {
+//     console.log(mic.listSources());
+//     // mic.stop;
+//     mic.setSource(4);
+//     mic.start;
+//     fft.setInput(mic);
+// }
+
 function draw() {
   // noCursor();
   fill(0,15,30,20);
@@ -49,7 +57,7 @@ function draw() {
     var x = map(i, 0, waveform.length, 0, w);
     var y = map( waveform[i], 0, 255, 0, h);
     if ( playing ) {
-      vertex( x,y+( Math.sin(frameCount*0.0125)*120) );
+      vertex( x,y+( Math.sin(frameCount*0.0125)*360) );
     }
     else {
       vertex( x,y );
