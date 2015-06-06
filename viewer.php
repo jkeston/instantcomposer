@@ -32,9 +32,9 @@
 	else {
 ?>	
 	<div id="visuals"></div>
+	<div id="countdown"></div>
 	<main>
 		<div id="playing">
-			<header></header>
 			<input type="hidden" id="playing_id" value="" />
 			<div id="view_score">
 				<h3><strong id="review_title">___________</strong></h3>
@@ -47,6 +47,8 @@
 			<div id="qlist">
 			</div>
 		</div>
+		<div id="timer">0:00</div>
+		<div id="logo"><img src="images/instantComposer2.svg" width="100%" /></div>
 	</main>
 <?php
 	}

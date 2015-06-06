@@ -3,7 +3,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	background-color: #000;
-	color: rgba(255,255,255,0.5);
+	color: rgba(255,255,255,0.6);
 }
 * {
 	box-sizing: border-box;
@@ -15,12 +15,12 @@ body, html {
 main {
 	padding: 2em;
 }
-header {
-	background-image: url(../images/instantComposer2.svg);
-	background-position: 70% 0;
-	background-size: cover;
-	width: 50%;
-	height: 9vw;
+#logo {
+	position: absolute;
+	z-index: 4;
+	bottom: 1vw;
+	left: 2.5vw;
+	width: 40%;
 	opacity: 0.75;
 }
 h1,h2,h3,h4 {
@@ -38,6 +38,9 @@ h1 {
 button {
 	padding: 0.5em;
 }
+#view_score {
+	opacity: 0.4;
+}
 #visuals {
 	margin: 0;
 	padding: 0;
@@ -45,6 +48,21 @@ button {
 	z-index: 1;
 	width: 100%;
 	height: 100%;
+}
+#countdown {
+	position: absolute;
+	/*background-color: rgba(255,0,0,0.25);*/
+	color: rgba(135,0,85,0.55);
+	font-size: 80vw;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	line-height: 56vw;
 }
 #queued {
 	text-align: right;
@@ -70,6 +88,21 @@ button {
 	padding: 0;
 	width: 20%;
 	float: right;
+}
+#timer {
+	/*background-color: rgba(128,0,0,0.5);*/
+	position: absolute;
+	display: none;
+	overflow: hidden;
+	z-index: 3;
+	font-size: 7vw;
+	bottom: 1vw;
+	/*bottom: -7vw;*/
+	/*right: 2.5vw;*/
+	right: -14vw;
+	width: 3em;
+	text-align: right;
+	color: rgba(0,169,206,0.5);
 }
 #playing {
 	position: absolute;

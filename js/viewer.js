@@ -28,10 +28,81 @@ $(document).ready(function() {
 			startScore(n);
 		}
 		if(e.which == 32 && onDeck > 0) {
-			playing = true;
+			$('#countdown').html('5');
+			$('#countdown').animate({
+    			fontSize: 0
+  			}, 1000, function() {
+  				$('#countdown').html('');
+  				$('#countdown').css('fontSize','80vw');
+  				$('#countdown').html('4');
+				$('#countdown').animate({
+    				fontSize: 0
+  				}, 1000, function() {
+    				// Animation complete.
+    				$('#countdown').html('');
+	  				$('#countdown').css('fontSize','80vw');
+  					$('#countdown').html('3');
+					$('#countdown').animate({
+  	 	 				fontSize: 0
+  					}, 1000, function() {
+  	 	 				// Animation complete.
+  	 	 				$('#countdown').html('');
+	  					$('#countdown').css('fontSize','80vw');
+  						$('#countdown').html('2');
+						$('#countdown').animate({
+  	 	 					fontSize: 0
+  						}, 1000, function() {
+  	 	 					// Animation complete.
+  	 	 					$('#countdown').html('');
+	  						$('#countdown').css('fontSize','80vw');
+  							$('#countdown').html('1');
+							$('#countdown').animate({
+  	 	 						fontSize: 0
+  							}, 1000, function() {
+  	 	 						// Animation complete.
+  	 	 						$('#countdown').html('');
+	  							$('#countdown').css('fontSize','80vw');
+	  							playing = true;
+								animatePlaying();
+  							});
+  						});
+  					});
+  				});
+  			});
 		}
 	});
 });
+function animatePlaying() {
+	$('#timer').css('display','block');
+	$('#timer').animate({right: '2.5vw'},500);
+	$('#logo').animate({left: '-40vw'},500);
+	$('#queued').animate({
+		width: '15%',
+		fontSize: '1vw',
+		opacity: 0.4
+	});
+	$('#playing').animate({
+		width: '85%',
+		fontSize: '4vw'
+
+	});
+}
+function animateStopped() {
+	$('#view_score').animate({opacity: 0.4},3500);
+	$('#timer').animate({right: '-14vw'},500);
+	$('#timer').css('display','none');
+	$('#logo').animate({left: '2.5vw'},500);
+	$('#queued').animate({
+		width: '20%',
+		fontSize: '1.25vw',
+		opacity: 1
+	});
+	$('#playing').animate({
+		width: '80%',
+		fontSize: '3.5vw'
+
+	});
+}
 function loadQueued() {
 	$.ajax({
 		url: 'start_score.php',
@@ -56,7 +127,6 @@ function loadQueued() {
 			}
 			// console.log(list);
 			$('#qlist').html(list);
-			$('#view_score').css('opacity',0.125);
 			//alert(list);
 		},
 	});
@@ -83,6 +153,7 @@ function startScore(sid) {
 				$('#review_tonality').html(result.tonality);
 				$('#review_tempo').html(result.tempo);
 				$('#review_length').html(secs2Mins(result.len));
+				$('#timer').html(secs2Mins(result.len));
 				$('#review_mood').html(result.mood);
 				$('#review_dynamics').html(result.dynamics);
 				$('#view_score').animate({opacity: 1},1000);
@@ -102,6 +173,7 @@ function startScore(sid) {
 					$('#review_tonality').html(result.tonality);
 					$('#review_tempo').html(result.tempo);
 					$('#review_length').html(secs2Mins(result.len));
+					$('#timer').html(secs2Mins(result.len));
 					$('#review_mood').html(result.mood);
 					$('#review_dynamics').html(result.dynamics);
 					$('#nothing').html('');
@@ -130,7 +202,6 @@ function stopScore(sid) {
             if ( result.status == true ) {
             	playing = false;
             	onDeck = 0;
-            	$('#view_score').animate({opacity: 0.125},3500);
     			$("#playing_id").val('');
 				// $("#review_title").html('___________');
 				// $("#review_author").html('By ___________');
@@ -140,6 +211,7 @@ function stopScore(sid) {
 				// $("#review_length").html('___________');
 				// $("#review_mood").html('___________');
 				// $("#review_dynamics").html('___________');
+				animateStopped();
             }
         },
     });
@@ -156,11 +228,11 @@ function secs2Mins(e) {
 }
 setInterval(function(){ 
 	if ( playing ) {
-		var time = $('#review_length').html();
+		var time = $('#timer').html();
 		var p = time.split(':');
 		var secs = ( Number(p[0]) * 60 ) + Number(p[1]);
 		secs -= 1;
-		$('#review_length').html(secs2Mins(secs));
+		$('#timer').html(secs2Mins(secs));
 		if (secs < 1) {
 			stopScore($('#playing_id').val());
 			playing = false;
