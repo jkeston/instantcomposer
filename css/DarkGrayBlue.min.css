@@ -155,3 +155,14 @@ a {
  }
  
 strong { color: #00a9ce; }
+
+a#instruments-button.ui-btn.ui-icon-carat-d.ui-btn-icon-right.ui-corner-all.ui-shadow.ui-li-has-count,
+input#tonality,
+input#dynamics,
+input#mood,
+input#tempo,
+a.ui-slider-handle.ui-btn.ui-shadow,
+input#title,
+input#author {
+	background-color: #555;
+}
