@@ -13,7 +13,7 @@
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/viewer.js"></script>
 	<script src="js/p5.min.js"></script>
-	<script src="js/p5.sound.js"></script>
+	<script src="js/p5.sound.min.js"></script>
 	<script src="js/p5.icmlm.js"></script>
 </head>
 <body>

@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
   // noCursor();
-  fill(0,15,30,20);
+  fill(0,7,15,5);
   noStroke();
   rect(0,0,w,h);
 
@@ -46,18 +46,21 @@ function draw() {
     stroke(100,0,70,120); // waveform color
   }
   else {
-    var r = 32;
-    var g = Math.abs(Math.round(Math.sin(frameCount*0.0125)*128))+64;
-    var b = Math.abs(Math.round(Math.sin(frameCount*0.015)*192))+64;
+    var r = 24;
+    var g = Math.abs(Math.round(Math.sin(frameCount*0.0125)*100))+64;
+    var b = Math.abs(Math.round(Math.sin(frameCount*0.015)*175))+64;
     // console.log(r,g,b);
-    stroke(r,g,b,120);
+    stroke(r,g,b,110);
   }
   strokeWeight(3);
   for (var i = 0; i < waveform.length; i++){
     var x = map(i, 0, waveform.length, 0, w);
-    var y = map( waveform[i], 0, 255, 0, h);
+    var y = map( waveform[i], -1, 1, 0, h);
+    // if ( frameCount % 100 ) {
+    //   console.log(waveform[i]);
+    // }
     if ( playing ) {
-      vertex( x,y+( Math.sin(frameCount*0.0125)*360) );
+      vertex( x,y+( Math.sin(frameCount*0.0125)*440) );
     }
     else {
       vertex( x,y );

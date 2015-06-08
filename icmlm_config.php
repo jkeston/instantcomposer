@@ -1,6 +1,6 @@
 <?php
     // connect to database
-    $dbh = mysql_connect("localhost", "username", "password") or die("Connection failed");
+    $dbh = mysql_connect("localhost", "unearthe_icmlm", "madlibbed229") or die("Connection failed");
     mysql_select_db("unearthe_icmlm");
     // Set timezine
     date_default_timezone_set('America/Chicago');

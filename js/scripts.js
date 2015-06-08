@@ -56,19 +56,21 @@ $(document).ready(function(){
 	});
 	$.ajax({
 		url: 'get_instruments.php',                   
-		async: 'false',
+		async: 'true',
+		type: 'GET',
+		timeout: 9999,
 		dataType: 'json',
 		success: function(result) {
 			// alert('result|'+result.status);
 			if ( result.status ) {
 				$('#instruments').append( result.options );
-				// $("#instruments").selectmenu('refresh', true);
+				$("#instruments").selectmenu('refresh', true);
 				$.mobile.navigate("#intro");
 				//console.log('?'+result.options);
 			}
 			else {
 				$('#instruments').append( '<option>No instruments Available</option>\n' );
-				// $("#instruments").selectmenu('refresh', true);
+				$("#instruments").selectmenu('refresh', true);
 				$.mobile.navigate("#intro");
 			}
 		},

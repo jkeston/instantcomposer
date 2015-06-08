@@ -1,7 +1,9 @@
 var playing;
 var onDeck;
+var cstart;
 $(document).ready(function() {
 	playing = false;
+	cstart = false;
 	onDeck = 0;
 	loadQueued();
 	$(document).keyup(function(e) {
@@ -27,7 +29,8 @@ $(document).ready(function() {
 			var n = $('#sequence4').val();
 			startScore(n);
 		}
-		if(e.which == 32 && onDeck > 0) {
+		if(e.which == 32 && onDeck > 0 && !cstart && !playing) {
+			cstart = true;
 			$('#countdown').html('5');
 			$('#countdown').animate({
     			fontSize: 0
@@ -63,6 +66,7 @@ $(document).ready(function() {
   	 	 						$('#countdown').html('');
 	  							$('#countdown').css('fontSize','80vw');
 	  							playing = true;
+	  							cstart = false;
 								animatePlaying();
   							});
   						});
@@ -89,8 +93,9 @@ function animatePlaying() {
 }
 function animateStopped() {
 	$('#view_score').animate({opacity: 0.4},3500);
-	$('#timer').animate({right: '-14vw'},500);
-	$('#timer').css('display','none');
+	$('#timer').animate({right: '-14vw'},500,function(){
+		$('#timer').css('display','none');
+	});
 	$('#logo').animate({left: '2.5vw'},500);
 	$('#queued').animate({
 		width: '20%',
