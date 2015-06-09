@@ -125,10 +125,10 @@ button.navReview a:hover {
 	color: #555555 !important ;
 	text-shadow: none !important ;
  }
-div.ui-footer {
+/*div.ui-footer {
 	padding-left: 10px;
 	padding-right: 10px;
-}
+}*/
 a {
 	text-decoration: none;
 	color: #00a9ce;
