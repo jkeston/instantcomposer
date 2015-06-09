@@ -113,7 +113,7 @@ button.navReview {
 button.navPrev { margin-right: 1.5%;}
 button.navPrev,
 button.navNext {
-	width: 46% !important;
+	width: 47% !important;
 	display: inline-block !important;
 	padding: 0;
 }
