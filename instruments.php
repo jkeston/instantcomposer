@@ -106,6 +106,7 @@
 <body>
 	<main>
 		<header>
+		    <img src="images/icmlm_logo_ALT.png" width="159" height="104" alt="" border="0">
 			<h1>Instant Composer Instruments</h1>
 			<p><a href="moderate.php">Moderate Scores</a> | Manage Instruments</p>
 		</header>

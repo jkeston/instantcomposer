@@ -1,4 +1,4 @@
-<?
+<?php
 	include('icmlm_config.php');
 	if ( count($_POST) > 0 ) {
 		include('mod_actions.php');
@@ -106,6 +106,7 @@
 <body>
 	<main>
 		<header>
+			<img src="images/icmlm_logo_ALT.png" width="159" height="104" alt="" border="0">
 			<h1>Instant Composer Moderation</h1>
 			<p>Moderate Scores | <a href="instruments.php">Manage Instruments</a></p>
 		</header>
