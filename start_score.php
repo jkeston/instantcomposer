@@ -19,6 +19,16 @@
 					'tempo'			=> $row['tempo'],
 					'len'			=> $row['length']		
 				);
+				// check for notifcations
+				if ( $row['notify'] == 'yes' ) {
+					$query = "UPDATE icmlm_scores SET notify = 'notified' WHERE id = ".$row['id'];
+					$r = mysql_query($query);
+					$safe_email = str_replace("\r\n",'',$row['email']);
+					$message = 'Your composition, '.$row['title'].', is among the next five scores queued for performance! Please meet us inside the Mill City Commons to hear your piece!';
+					$message .= "\n\nhttp://audiocookbook.org\n";
+					$message .= "http://icmlm.audiocookbook.org";
+					mail("$safe_email",'Your Score is About to be Played!',$message,"From: icmlm@audiocookbook.org\r\nReturn-path: icmlm@audiocookbook.org");
+				}
 			}
 			echo json_encode($output);
 			break;

@@ -26,6 +26,7 @@
 			title,		
 			author,
 			email,
+			notify,
 			instruments,
 			tonality,	
 			dynamics,	
@@ -37,6 +38,7 @@
 			$f['title']."','".
 			$f['author']."','".
 			$f['email']."','".
+			$f['notify']."','".
 			$f['inst_joined']."','".
 			$f['tonality']."','".
 			$f['dynamics']."','".

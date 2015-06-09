@@ -3,6 +3,7 @@ CREATE TABLE icmlm_scores (
 	title			VARCHAR(64) NOT NULL, 
 	author			VARCHAR(64) NOT NULL,
 	email			VARCHAR(128),
+	notify			VARCHAR(16),
 	instruments		VARCHAR(1024) NOT NULL,
 	tonality		VARCHAR(64) NOT NULL,
 	dynamics		VARCHAR(64) NOT NULL,
