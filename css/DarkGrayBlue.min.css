@@ -105,7 +105,7 @@ button.navStart {
  }
  button.navStart,
  button.navSubmit {
-	width: 93% !important;
+	width: 97% !important;
 }
 button.navReview {
 	text-shadow: none !important ;
@@ -117,7 +117,6 @@ button.navNext {
 	display: inline-block !important;
 	padding: 0;
 }
-
 button.navStart a:hover,
 button.navPrev a:hover,
 button.navNext a:hover,
@@ -126,10 +125,14 @@ button.navReview a:hover {
 	color: #555555 !important ;
 	text-shadow: none !important ;
  }
-
+div.ui-footer {
+	padding-left: 10px;
+	padding-right: 10px;
+}
 a {
 	text-decoration: none;
-	color: #00a9ce; }
+	color: #00a9ce;
+}
 
 #notify_email {
 	display: none;
