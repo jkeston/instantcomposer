@@ -25,9 +25,9 @@
 					</div>
 					<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
 					<p>Through a process that can take less than a minute you will write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
-					<button class="nav-btn navStart"><a href="#step1" data-transition="slide">Start Composing</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navStart"><a href="#step1" data-transition="slide">Start Composing</a></button>
 					<a href="#intro" class="icn home-icn ui-btn-active" data-transition="slide"></a>
 					<a href="#step1" data-transition="slide">1</a>
 					<a href="#step2" data-transition="slide">2</a>
@@ -46,10 +46,10 @@
 					<select multiple="true" data-native-menu="false"  name="instruments[]" id="instruments">
 					</select>
 					<p>* Some instruments might be substituted if not available for your performance.</p>
-					<button class="nav-btn navPrev" data-theme="b"><a href="#intro" data-transition="slide" data-direction="reverse">Previous</a></button>
-					<button class="nav-btn navNext" data-theme="b"><a href="#step2" data-transition="slide">Next</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navPrev" data-theme="b"><a href="#intro" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext" data-theme="b"><a href="#step2" data-transition="slide">Next</a></button>
 					<a href="#intro" class="icn home-icn" data-transition="slide" data-direction="reverse"></a>
 					<a href="#step1" data-transition="slide" class="ui-btn-active">1</a>
 					<a href="#step2" data-transition="slide">2</a>
@@ -85,10 +85,10 @@
 						<li><a onclick="pop('#tonality','major blues')">Major Blues</a></li>
 						<li><a onclick="pop('#tonality','minor blues')">Minor Blues</a></li>
 					</ul>
-					<button class="nav-btn navPrev" data-theme="b"><a href="#step1" data-transition="slide" data-direction="reverse">Previous</a></button>
-					<button class="nav-btn navNext" data-theme="b"><a href="#step3" data-transition="slide">Next</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navPrev" data-theme="b"><a href="#step1" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext" data-theme="b"><a href="#step3" data-transition="slide">Next</a></button>
 					<a href="#intro" class="icn home-icn" data-transition="slide" data-direction="reverse"></a>
 					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 					<a href="#step2" data-transition="slide" class="ui-btn-active">2</a>
@@ -122,10 +122,11 @@
 					<label for="mood">What is the mood? Is it tranquil, brilliant, melancholy? Use your own words:</label>
 					<!-- <input type="text" name="tonality" id="tonality" value="" placeholder="Describe the tonality" /> -->
 					<input type="text" name="mood" id="mood" placeholder="Describe the mood..." />
-					<button class="nav-btn navPrev" data-theme="b"><a href="#step2" data-transition="slide" data-direction="reverse">Previous</a></button>
-					<button class="nav-btn navNext" data-theme="b"><a href="#step4" data-transition="slide">Next</a></button>
+					<p>&nbsp;</p>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navPrev" data-theme="b"><a href="#step2" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext" data-theme="b"><a href="#step4" data-transition="slide">Next</a></button>
 					<a href="#intro" class="icn home-icn" data-transition="slide" data-direction="reverse"></a>
 					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
@@ -156,10 +157,10 @@
 					<p>&nbsp;</p>
 					<label for="length">Length (3:00 to 7:00 mins): <strong id="len"></strong></label>
 					<input type="range" name="length" id="length" value="240" min="180" max="420" data-highlight="true" onchange="updateMins(this)" />
-					<button class="nav-btn navPrev" data-theme="b"><a href="#step3" data-transition="slide" data-direction="reverse">Previous</a></button>
-					<button class="nav-btn navNext" data-theme="b"><a href="#step5" data-transition="slide">Next</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navPrev" data-theme="b"><a href="#step3" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext" data-theme="b"><a href="#step5" data-transition="slide">Next</a></button>
 					<a href="#intro" class="icn home-icn" data-transition="slide" data-direction="reverse"></a>
 					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
@@ -175,8 +176,10 @@
 				<div data-role="content" data-theme="b">
 					<label for="title">Almost there! Now it's time to give your piece a title:</label>
 					<input type="text" name="title" id="title" placeholder="Name the composition..." value="" />
+					<p>&nbsp;</p>
 					<label for="author">Please enter the full name of the composer (leave it blank if you'd like to remain anonymous): </label>
 					<input type="text" name="author" id="author" placeholder="Anonymous..." />
+					<p>&nbsp;</p>
 					<div data-role="popup" id="note" class="ui-content icmlm_popup" data-theme="b">
 						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
 						<p>We will keep your email address private and only use it to notify you shortly before your composition is about to be performed by the ensemble.</p>
@@ -184,10 +187,10 @@
 					<label for="notify"><input type="checkbox" name="notify" id="notify" value="yes" data-theme="b" /> Remind me shortly before my piece is played</label>
 					<div id="notify_email" data-theme="b"><label for="email">Please enter your email for <a href="#note" data-transition="slidedown" data-rel="popup" data-position-to="window">notification</a> only:</label>
 					<input type="text" name="email" id="email" placeholder="Email..." /></div>
-					<button class="nav-btn navPrev" data-theme="b"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button>
-					<button class="nav-btn navNext" data-theme="b"><a onclick="renderReview()" href="#review" data-transition="slide">Review</a></button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navPrev" data-theme="b"><a href="#step4" data-transition="slide" data-direction="reverse">Previous</a></button>
+					<button class="nav-btn navNext" data-theme="b"><a onclick="renderReview()" href="#review" data-transition="slide">Review</a></button>
 					<a href="#intro" class="icn home-icn" data-transition="slide" data-direction="reverse"></a>
 					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>
@@ -219,9 +222,9 @@
 					<input href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window" type="checkbox" name="agree" id="agree" value="yes" /><label for="agree">I allow my piece to be performed.</label>
 					<p>* Once you <a href="#perform" data-transition="slidedown" data-rel="popup" data-position-to="window">agree</a> your piece will be <a href="#moderation" data-transition="slidedown" data-rel="popup" data-position-to="window">moderated</a> for content.</p>
 					<!-- <input type="submit" value="Submit My Piece" id="submit" /> -->
-					<button class="nav-btn navSubmit" type="submit" value="Submit My Piece" id="submit" data-theme="b">Submit My Piece</button>
 				</div>
 				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navSubmit" type="submit" value="Submit My Piece" id="submit" data-theme="b">Submit My Piece</button>
 					<a href="#intro" class="icn home-icn" data-transition="slide" data-direction="reverse"></a>
 					<a href="#step1" data-transition="slide" data-direction="reverse">1</a>
 					<a href="#step2" data-transition="slide" data-direction="reverse">2</a>

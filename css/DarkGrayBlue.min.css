@@ -99,23 +99,23 @@ button > a {
 	background-color: #555;
 	color: #00a9ce;
 }
-
 button.navStart {
 	padding: 0;
 	color: #00a9ce;
-	text-shadow: none !important ;
  }
-
+ button.navStart,
+ button.navSubmit {
+	width: 93% !important;
+}
 button.navReview {
 	text-shadow: none !important ;
  }
-
+button.navPrev { margin-right: 1.5%;}
 button.navPrev,
 button.navNext {
-	width: 49% !important;
+	width: 46% !important;
 	display: inline-block !important;
 	padding: 0;
-	text-shadow: none !important ;
 }
 
 button.navStart a:hover,
@@ -172,15 +172,16 @@ input#mood,
 input#tempo,
 a.ui-slider-handle.ui-btn.ui-shadow,
 input#title,
-input#author {
+input#author,
+input#email {
 	background-color: #555;
 }
 
 .ui-footer > a {
 	padding: 10px 14px;
 }
-.ui-footer > a:first-child,
-.ui-footer > a:last-child {
+.ui-footer > a[href="#intro"],
+.ui-footer > a[href="#review"] {
 	padding: 4px 12px;
 }
 a.icn::before {
@@ -198,5 +199,12 @@ a.home-icn::before {
 a.review-icn::before {
 	content: "\f15c";
 }
-
-hsla(190, 100%, 40%, 1)
+input {
+	box-shadow: inset 2px 2px 2px hsla(0, 70%, 0%, 0.4);
+	border-bottom: 1px solid hsla(0, 0%, 70%, 0.3) !important;
+}
+label[for="notify"] {
+	font-size: 12px;
+	padding-left: 35px;
+	color: hsl(0, 0%, 50%) !important;
+}
