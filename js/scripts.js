@@ -2,21 +2,25 @@ $(document).ready(function(){
 	var page_ids = ['intro','step1','step2','step3','step4','step5','review'];
 	// Bind the swipeleftHandler callback function to the swipe event on div.box
 	$( "body" ).on( "swipeleft", function(){
-		goLeft();
+			goLeft();
 	});
 	// Bind the swipeleftHandler callback function to the swipe event on div.box
 	$( "body" ).on( "swiperight", function() {
-		goRight();
+			goRight();
 	});
 	// Bind left key to goRight and right to goLeft
 	$(document).keyup(function(e) {
 		// console.log(e.which);
 		// left = 37, right = 39
 		if (e.which == 37) {
-			goRight();
+			if ($('input:focus').length == 0) {
+				goRight();
+			}
 		}
 		if (e.which == 39) {
-			goLeft();
+			if ($('input:focus').length == 0) {
+				goLeft();
+			}
 		}
 	});
 	function goLeft() {

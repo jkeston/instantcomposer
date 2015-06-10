@@ -2,6 +2,7 @@ var playing;
 var onDeck;
 var cstart;
 $(document).ready(function() {
+	$("body").css("overflow", "hidden");
 	playing = false;
 	cstart = false;
 	onDeck = 0;
@@ -244,4 +245,4 @@ setInterval(function(){
 			onDeck = 0;
 		}
 	}
-}, 1000);
+}, 100);
