@@ -13,7 +13,7 @@
 	<script src="js/scripts.js"></script>
 </head>
 <body>
-	<div data-role="main" data-theme="b">
+	<div data-role="main" data-theme="b" id="wrapper">
 		<form method="post" class="ui-filterable" onsubmit="return validate_score()" data-ajax="false" id="queuescore">
 			<div data-role="page" id="intro" data-theme="b"><!--Begin Intro-->
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="b" id="ichead">
@@ -174,12 +174,10 @@
 				<div data-role="header" data-position="fixed" data-id="header1" data-theme="b" id="ichead">
 				</div>
 				<div data-role="content" data-theme="b">
-					<label for="title">Almost there! Now it's time to give your piece a title:</label>
+					<label for="title">Give your piece a title:</label>
 					<input type="text" name="title" id="title" placeholder="Name the composition..." value="" />
-					<p>&nbsp;</p>
-					<label for="author">Please enter the full name of the composer (leave it blank if you'd like to remain anonymous): </label>
+					<label for="author">Composer's name (blank for anonymous): </label>
 					<input type="text" name="author" id="author" placeholder="Anonymous..." />
-					<p>&nbsp;</p>
 					<div data-role="popup" id="note" class="ui-content icmlm_popup" data-theme="b">
 						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
 						<p>We will keep your email address private and only use it to notify you shortly before your composition is about to be performed by the ensemble.</p>
