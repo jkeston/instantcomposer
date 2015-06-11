@@ -147,6 +147,8 @@
 					<label for="tempo">Describe the <a href="#temp" data-transition="slidedown" data-rel="popup" data-position-to="window">tempo</a> (speed):</label>
 					<input type="text" name="tempo" id="tempo" placeholder="Set the tempo..." value="" />
 					<ul data-filter="true" data-input="#tempo" data-role="listview" data-filter-reveal="true" data-inset="true">
+						<li><a onclick="pop('#tempo','atemporal')">Atemporal (without tempo)</a></li>
+						<li><a onclick="pop('#tempo','temporal')">Temporal (with tempo)</a></li>
 						<li><a onclick="pop('#tempo','largo')">Largo (very slow)</a></li>
 						<li><a onclick="pop('#tempo','adagio')">Adagio (slow)</a></li>
 						<li><a onclick="pop('#tempo','andante')">Andante (walking pace)</a></li>
