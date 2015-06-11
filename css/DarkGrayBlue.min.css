@@ -140,6 +140,14 @@ a {
 	color: #00a9ce;
 }
 
+a.ui-btn ui-corner-all ui-btn-left ui-btn-icon-notext ui-icon-delete {
+    background-color: #333 !important;
+}
+
+#notify {
+    background-color: #333 !important;
+}
+
 #notify_email {
 	display: none;
 }
@@ -159,7 +167,15 @@ a {
 .ui-slider-track {
 	margin: 0 !important;
 }
+.icmlm_popup {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80%;
+}
 
+#oliveros, #tonal, #dynam, #temp, #note, #validate, #perform, #moderation {
+	background-color: #555;
+}
 #submit {
 	background-color: #555;
 	color: #00a9ce !important;
@@ -214,7 +230,11 @@ input {
 label[for="notify"] {
 	font-size: 12px;
 	padding-left: 35px;
-	color: hsl(0, 0%, 50%) !important;
+	/*color: hsl(0, 0%, 50%) !important;*/
+    background-color: #333 !important;
+}
+label[for="agree"] {
+    background-color: #333 !important;
 }
 h2 {
 	margin-top: 0;
