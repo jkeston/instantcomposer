@@ -1,4 +1,5 @@
 var mic, fft, w, h, canvas;
+var level = 1.0;
 
 function setup() {
   w = displayWidth;
@@ -19,6 +20,25 @@ function setup() {
 //     mic.start;
 //     fft.setInput(mic);
 // }
+function adjustMic() {
+  if ( keyIsDown(UP_ARROW) ) {
+    // console.log('UP');
+    level += 0.01;
+    if ( level > 1 ) {
+      level = 1;
+    }
+    mic.amp(level);
+    console.log(level);
+  } 
+  else if ( keyIsDown(DOWN_ARROW) ) {
+    level -= 0.01;
+    if ( level < 0 ) {
+      level = 0;
+    }
+    mic.amp(level);
+    console.log(level);
+  }
+}
 
 function draw() {
   // noCursor();
@@ -69,4 +89,7 @@ function draw() {
   }
   endShape();
   // pop();
+  if ( frameCount % 10 ) {
+    adjustMic();
+  }
 }
