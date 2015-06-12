@@ -111,15 +111,20 @@ button.navStart {
  }
  button.navStart,
  button.navSubmit {
-	width: 97% !important;
+	width: 100% !important;
 }
 button.navReview {
 	text-shadow: none !important ;
  }
-button.navPrev { margin-right: 1.5%;}
+button.navPrev { 
+	margin-right: 1%;
+}
+button.navNext { 
+	margin-left: 1%;
+}
 button.navPrev,
 button.navNext {
-	width: 47% !important;
+	width: 48% !important;
 	display: inline-block !important;
 	padding: 0;
 }
@@ -207,6 +212,10 @@ input#email {
 .ui-footer > a[href="#intro"],
 .ui-footer > a[href="#review"] {
 	padding: 4px 12px;
+}
+.ui-footer-fixed {
+	padding: 1em;
+	box-sizing: border-box;
 }
 a.icn::before {
 	display: block;
