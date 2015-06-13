@@ -20,9 +20,9 @@ html {
 	font-family: 'Lato', sans-serif !important;
 	font-weight: 300 !important;
 }
-body::-webkit-scrollbar { 
+body::-webkit-scrollbar {
 	width: 0 !important;
-} 
+}
 body {
 	overflow: -moz-scrollbars-none;
 }
@@ -116,10 +116,10 @@ button.navStart {
 button.navReview {
 	text-shadow: none !important ;
  }
-button.navPrev { 
+button.navPrev {
 	margin-right: 1%;
 }
-button.navNext { 
+button.navNext {
 	margin-left: 1%;
 }
 button.navPrev,
@@ -144,19 +144,15 @@ a {
 	text-decoration: none;
 	color: #00a9ce;
 }
-
 a.ui-btn ui-corner-all ui-btn-left ui-btn-icon-notext ui-icon-delete {
     background-color: #333 !important;
 }
-
 #notify {
     background-color: #333 !important;
 }
-
 #notify_email {
 	display: none;
 }
-
 #ichead {
 	background-color: #222;
 	background-repeat: no-repeat;
@@ -164,7 +160,6 @@ a.ui-btn ui-corner-all ui-btn-left ui-btn-icon-notext ui-icon-delete {
 	background-size: 100%;
 	height: 25vw;
 }
-
 .ui-slider-input {
 	visibility: hidden !important;
 	display: none !important;
@@ -209,9 +204,11 @@ input#email {
 .ui-footer > a {
 	padding: 10px 14px;
 }
-.ui-footer > a[href="#intro"],
-.ui-footer > a[href="#review"] {
+.ui-footer > a[href="#intro"] {
 	padding: 3px 9px;
+}
+.ui-footer > a[href="#review"] {
+	padding: 6px 10px;
 }
 .ui-footer-fixed {
 	padding: 1em;
@@ -220,7 +217,6 @@ input#email {
 a.icn::before {
 	display: block;
 	font-family: FontAwesome;
-	font-size: 26px;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -228,9 +224,11 @@ a.icn::before {
 }
 a.home-icn::before {
 	content: "\f015";
+	font-size: 26px;
 }
 a.review-icn::before {
 	content: "\f15c";
+	font-size: 22px;
 }
 input {
 	box-shadow: inset 2px 2px 2px hsla(0, 70%, 0%, 0.4);
@@ -243,15 +241,28 @@ label[for="notify"] {
     background-color: #333 !important;
 }
 label[for="agree"] {
-    background-color: #333 !important;
+	background-color: #333 !important;
+}
+label[for="agree"],
+label[for="notify"] {
+    font-size: 1em !important;
 }
 h2 {
 	margin-top: 0;
+}
+@media(max-width: 640px) {
+	label[for="notify"],
+	label[for="agree"] {
+    font-size: .8em !important;
+}
 }
 @media(min-width: 640px) {
 	#ichead {
 		background-size: 640px;
 		height: 163px;
+	}
+	p, label {
+		font-size: 1.3em !important;
 	}
 }
 /* Hacks to solve Instrument list swapping to theme-a on short heights */
