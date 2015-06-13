@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instant Composer: Mad-libbed Music</title>
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, user-scalable=no">
+	<!-- <link rel="stylesheet" href="css/webapp.css" /> -->
+	<link rel="stylesheet" href="css/DarkGrayBlue.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+<body>
+	<div data-role="main" data-theme="b" id="wrapper">
+		<form method="post" class="ui-filterable" onsubmit="return validate_score()" data-ajax="false" id="queuescore">
+			<div data-role="page" id="intro" data-theme="b"><!--Begin Intro-->
+				<div data-role="header" data-position="fixed" data-id="header1" data-theme="b" id="ichead">
+				</div>
+				<div data-role="content" data-theme="b">
+					<div data-role="popup" id="oliveros" class="ui-content icmlm_popup" data-theme="b">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+						<p><strong>Pauline Oliveros</strong> is an American composer and accordionist who is a central figure in the development of experimental and post-war electronic art music. She was a founding member of the San Francisco Tape Music Center in the 1960s, and served as its director. She has taught music at Mills College, the University of California, San Diego, Oberlin Conservatory of Music, and Rensselaer Polytechnic Institute. Oliveros has written books, formulated new music theories and investigated new ways to focus attention on music including her concepts of "Deep Listening" and "sonic awareness". &mdash; Wikipedia</p>
+					</div>
+					<h2>We haven't started yet!<br />
+						Please check back soon!</h2>
+					<p>Mad-libbed Music runs from 9:01pm until 5:26am on Saturday, June 13, 2015 at the Mill City Museum in Minneapolis.</p>
+					<p>This project instantly turns you, the audience, into a composer. You can write a piece of your own that will be played by our ensemble within minutes of composing it. Your compositions are textual or instructional scores popularized by <a href="#oliveros" data-transition="slidedown" data-rel="popup" data-position-to="window">Pauline Oliveros</a>.</p>
+					<p>Through a process that can take less than a minute you will write your piece and submit it for its debut. When you're ready to participate press the "Start Composing" button. Be creative and have fun composing!</p>
+				</div>
+				<div data-role="footer" style="text-align:center" data-position="fixed" data-id="footer" data-theme="b">
+					<button class="nav-btn navStart"><a href="http://icmlm.audiocookbook.org/" data-ajax="false">Refresh This Page!</a></button>
+				</div>
+			</div><!--End Intro-->
+		</form> 
+	</div>
+</body>
+</html>
