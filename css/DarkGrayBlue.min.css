@@ -211,7 +211,7 @@ input#email {
 }
 .ui-footer > a[href="#intro"],
 .ui-footer > a[href="#review"] {
-	padding: 4px 12px;
+	padding: 3px 9px;
 }
 .ui-footer-fixed {
 	padding: 1em;
@@ -262,4 +262,7 @@ h2 {
 .ui-page-theme-a .ui-bar-inherit {
 	background-color: #252525 !important;
 	color: #f3f3f3 !important;
+}
+.ui-btn {
+	border: none !important;
 }
