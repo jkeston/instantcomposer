@@ -254,3 +254,12 @@ h2 {
 		height: 163px;
 	}
 }
+/* Hacks to solve Instrument list swapping to theme-a on short heights */
+.ui-page-theme-a .ui-btn {
+	background-color: #555 !important;
+	border-color: #1f1f1f !important;
+}
+.ui-page-theme-a .ui-bar-inherit {
+	background-color: #252525 !important;
+	color: #f3f3f3 !important;
+}

@@ -12,6 +12,7 @@
 	if ($inst_count > 0) {
 		$values = array('status' => true,'options' => $options);
 		// error_log("ENTERED|".print_r($output,true)."|");
+		// error_log($options);
 		echo json_encode($values);
 	}
 	else {
